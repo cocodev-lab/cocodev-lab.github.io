@@ -22,6 +22,9 @@ function formatAuthor(raw: string): string {
   ).join(' ');
   return `${family}${initials ? `, ${initials}` : ''}${marker}`;
 }
+function paperEvent(id: string, linkType: string) {
+  return { 'data-analytics-event': 'paper_click', 'data-paper-id': id, 'data-link-type': linkType };
+}
 function authors(names: string[]): string {
   const formatted = names.map(formatAuthor);
   if (formatted.length === 1) return formatted[0];
@@ -37,13 +40,13 @@ function authors(names: string[]): string {
         {pub.venue && <><i>{pub.venue}</i>{pub.volume && <>, <i>{pub.volume}</i></>}{pub.issue && <>({pub.issue})</>}{pub.pages && <>, {pub.pages.replace(/--/g, '–')}</>}.</>}
       </div>
       <div class="publication-controls">
-        {pub.abstract && <button class="collapsible" type="button" data-abstract-toggle aria-expanded="false" aria-controls={`${prefix}-${pub.id}-abstract`} hidden>Abstract</button>}
-        {pub.url && <a class="other" href={pub.url}>Link</a>}
-        {pub.pdf && <a class="other" href={pub.pdf}>PDF</a>}
-        {!compact && pub.preprint && <a class="other" href={pub.preprint}>Preprint</a>}
-        {!compact && pub.code && <a class="other" href={pub.code}>Repo</a>}
-        {!compact && pub.additionalCode?.map((url, i) => <a class="other" href={url}>Repo {i + 2}</a>)}
-        {!pub.url && pub.doi && <a class="other" href={`https://doi.org/${pub.doi.replace(/^https?:\/\/doi.org\//, '')}`}>DOI</a>}
+        {pub.abstract && <button class="collapsible" type="button" data-abstract-toggle data-analytics-event="abstract_open" data-paper-id={pub.id} aria-expanded="false" aria-controls={`${prefix}-${pub.id}-abstract`} hidden>Abstract</button>}
+        {pub.url && <a class="other" href={pub.url} {...paperEvent(pub.id, 'link')}>Link</a>}
+        {pub.pdf && <a class="other" href={pub.pdf} {...paperEvent(pub.id, 'pdf')}>PDF</a>}
+        {!compact && pub.preprint && <a class="other" href={pub.preprint} {...paperEvent(pub.id, 'preprint')}>Preprint</a>}
+        {!compact && pub.code && <a class="other" href={pub.code} {...paperEvent(pub.id, 'repo')}>Repo</a>}
+        {!compact && pub.additionalCode?.map((url, i) => <a class="other" href={url} {...paperEvent(pub.id, 'repo')}>Repo {i + 2}</a>)}
+        {!pub.url && pub.doi && <a class="other" href={`https://doi.org/${pub.doi.replace(/^https?:\/\/doi.org\//, '')}`} {...paperEvent(pub.id, 'doi')}>DOI</a>}
       </div>
       {pub.abstract && <div id={`${prefix}-${pub.id}-abstract`} class="content publication-abstract-content"><p>{pub.abstract}</p></div>}
     </li>
