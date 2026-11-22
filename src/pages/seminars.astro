@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seminars } from '../data/seminars';
+---
+<BaseLayout title="Seminars">
+  <div class="content-page">
+    <p>The CoCoDev seminar series explores language development, communication, and learning across cognitive science and artificial intelligence.</p>
+    <div class="seminar-notice">
+      <p><strong>The CoCoDev seminars will return soon.</strong></p>
+      <p><a href="https://framalistes.org/sympa/info/cocodev">Subscribe to the CoCoDev seminar mailing list</a> to receive announcements.</p>
+    </div>
+    <ul class="seminar-list">
+      {seminars.map((talk, index) => <li>
+        <p class="metadata">{talk.date}</p>
+        <h2>{talk.title}</h2>
+        <p>{talk.url ? <a href={talk.url}>{talk.speaker}</a> : talk.speaker}{talk.affiliation && <> · {talk.affiliation}</>}</p>
+        <div class="publication-controls">
+          {talk.description && <button class="collapsible" type="button" data-description-toggle aria-expanded="false" aria-controls={`seminar-description-${index}`} hidden>Description</button>}
+          {talk.video && <a class="other" href={talk.video}>Recording</a>}
+        </div>
+        {talk.description && <div id={`seminar-description-${index}`} class="content seminar-description">{talk.description.split(/\n\s*\n/).map(paragraph => <p>{paragraph}</p>)}</div>}
+      </li>)}
+    </ul>
+  </div>
+</BaseLayout>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-description-toggle]').forEach(button => {
+    const id = button.getAttribute('aria-controls');
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+    panel.hidden = true;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      button.classList.toggle('active', open);
+      panel.hidden = !open;
+    });
+  });
+</script>

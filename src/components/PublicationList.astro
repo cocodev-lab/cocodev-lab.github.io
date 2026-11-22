@@ -1,0 +1,67 @@
+---
+import type { Publication } from '../data/publications';
+interface Props { publications: Publication[]; prefix?: string; compact?: boolean; }
+const { publications, prefix = 'pub', compact = false } = Astro.props;
+
+function formatAuthor(raw: string): string {
+  const marker = raw.match(/\*+$/)?.[0] ?? '';
+  const name = raw.replace(/\*+$/, '').trim();
+  let family: string;
+  let given: string;
+  if (name.includes(',')) {
+    const [surname, ...rest] = name.split(',');
+    family = surname.trim();
+    given = rest.join(' ').trim();
+  } else {
+    const parts = name.split(/\s+/);
+    family = parts.pop() ?? name;
+    given = parts.join(' ');
+  }
+  const initials = given.split(/\s+/).filter(Boolean).map(part =>
+    part.split('-').map(piece => Array.from(piece)[0] + '.').join('-')
+  ).join(' ');
+  return `${family}${initials ? `, ${initials}` : ''}${marker}`;
+}
+function authors(names: string[]): string {
+  const formatted = names.map(formatAuthor);
+  if (formatted.length === 1) return formatted[0];
+  if (formatted.length === 2) return formatted.join(' & ');
+  return formatted.slice(0, -1).join(', ') + ', & ' + formatted[formatted.length - 1];
+}
+---
+<ul class="bibliography">
+  {publications.map(pub => (
+    <li id={`${prefix}-${pub.id}`}>
+      <div class="text-justify">
+        {authors(pub.authors).split(/(Fourtassi, A\.)/).map(part => part === 'Fourtassi, A.' ? <b>{part}</b> : part)} ({pub.year}). {pub.title.replace(/\.$/, '')}.{' '}
+        {pub.venue && <><i>{pub.venue}</i>{pub.volume && <>, <i>{pub.volume}</i></>}{pub.issue && <>({pub.issue})</>}{pub.pages && <>, {pub.pages.replace(/--/g, '–')}</>}.</>}
+      </div>
+      <div class="publication-controls">
+        {pub.abstract && <button class="collapsible" type="button" data-abstract-toggle aria-expanded="false" aria-controls={`${prefix}-${pub.id}-abstract`} hidden>Abstract</button>}
+        {pub.url && <a class="other" href={pub.url}>Link</a>}
+        {pub.pdf && <a class="other" href={pub.pdf}>PDF</a>}
+        {!compact && pub.preprint && <a class="other" href={pub.preprint}>Preprint</a>}
+        {!compact && pub.code && <a class="other" href={pub.code}>Repo</a>}
+        {!compact && pub.additionalCode?.map((url, i) => <a class="other" href={url}>Repo {i + 2}</a>)}
+        {!pub.url && pub.doi && <a class="other" href={`https://doi.org/${pub.doi.replace(/^https?:\/\/doi.org\//, '')}`}>DOI</a>}
+      </div>
+      {pub.abstract && <div id={`${prefix}-${pub.id}-abstract`} class="content publication-abstract-content"><p>{pub.abstract}</p></div>}
+    </li>
+  ))}
+</ul>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-abstract-toggle]').forEach(button => {
+    const id = button.getAttribute('aria-controls');
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+    panel.hidden = true;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      button.classList.toggle('active', open);
+      panel.hidden = !open;
+    });
+  });
+</script>

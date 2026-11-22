@@ -1,0 +1,46 @@
+---
+import { personalNews, type NewsItem } from '../data/news';
+interface Props { id?: string; items?: NewsItem[]; limit?: number; showByline?: boolean; moreHref?: string; audience?: 'group' | 'personal'; }
+const { id = 'updates', items = personalNews, limit, showByline = true, moreHref, audience = 'personal' } = Astro.props;
+const heading = audience === 'group' ? 'CoCoDev updates' : 'Personal updates';
+const compact = limit !== undefined;
+const visibleItems = compact ? items.slice(0, limit) : items;
+---
+<section class="content-section recent-updates" aria-labelledby={id}>
+  <h2 id={id}>{heading}</h2>
+  {showByline && <p class="updates-byline"><em>By Abdellah Fourtassi, Principal Investigator</em></p>}
+  <p id={`${id}-hint`} class="updates-hint">{compact ? 'Latest updates.' : 'Scroll for more updates.'}{moreHref && <> <a href={moreHref}>{audience === 'group' ? 'All CoCoDev updates' : 'All personal updates'}</a></>}</p>
+  <div class:list={['updates-panel', `updates-panel--${audience}`, { 'updates-panel--compact': compact }]} role="region" aria-labelledby={id} aria-describedby={`${id}-hint`} tabindex={compact ? undefined : 0}>
+    <ul class="updates-list" role="list">
+      {visibleItems.map(item => <li>{item.text} {item.link && <a href={item.link.url}>({item.link.label})</a>}{item.links?.map(link => <> <a href={link.url}>({link.label})</a></>)}</li>)}
+    </ul>
+  </div>
+</section>
+<style>
+  .recent-updates > h2 { margin-bottom: 0.35rem; padding-bottom: 0; border-bottom: 0; }
+  .updates-byline { margin: 0 0 0.5rem; color: #393e46; font-size: 0.8em; }
+  .updates-hint { margin: 0 0 0.75rem; color: #393e46; font-size: 0.75em; }
+  .updates-panel {
+    box-sizing: border-box;
+    height: 24rem;
+    max-height: 60vh;
+    padding: 0.15rem 1.25rem;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    border: 1px solid #c5cdd2;
+    border-radius: 6px;
+    background-color: #f7f8f9;
+    font-size: 0.92em;
+    line-height: 1.55;
+  }
+  .updates-panel--group { background-color: #f2f5f7; }
+  .updates-panel--personal { background-color: #f7f4ee; }
+  .updates-panel--compact { height: auto; max-height: none; overflow: visible; scrollbar-gutter: auto; }
+  .updates-list { margin: 0; padding: 0; list-style: none; }
+  .updates-list > li { margin: 0; padding: 1rem 0; }
+  .updates-list > li + li { border-top: 1px solid #b9c3ca; }
+  @media (max-width: 480px) {
+    .updates-panel { padding-right: 0.9rem; padding-left: 0.9rem; font-size: 1em; }
+    .updates-list > li { padding: 0.9rem 0; }
+  }
+</style>

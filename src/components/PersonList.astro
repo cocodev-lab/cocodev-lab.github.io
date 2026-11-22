@@ -1,0 +1,17 @@
+---
+import type { Person } from '../data/people';
+interface Props { people: Person[]; }
+const { people } = Astro.props;
+---
+<ul class="people-list">
+  {people.map(person => (
+    <li class="person">
+      <img class="person__photo" src={person.photo ?? '/assets/people/profile-placeholder.svg'} alt="" width="80" height="80" loading="lazy" />
+      <div class="person__details">
+        <h3>{person.name}</h3>
+        <p class="person__role">{person.role}{person.year && <span> · {person.year}</span>}</p>
+        {person.url && <p class="person__links"><a href={person.url}>Personal page</a></p>}
+      </div>
+    </li>
+  ))}
+</ul>

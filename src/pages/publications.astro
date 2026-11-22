@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationList from '../components/PublicationList.astro';
+import { visiblePublications } from '../data/publications';
+
+const recentYears = [...new Set(visiblePublications.map(pub => pub.year).filter(year => Number(year) > 2019))].sort((a, b) => Number(b) - Number(a));
+const groups = [
+  { id: 'under-review', label: 'Under review', papers: visiblePublications.filter(pub => pub.year === 'under review') },
+  { id: 'in-press', label: 'In press', papers: visiblePublications.filter(pub => pub.year === 'in press') },
+  ...recentYears.map(year => ({ id: `year-${year}`, label: year, papers: visiblePublications.filter(pub => pub.year === year) })),
+  { id: '2019-and-earlier', label: '2019 and earlier', papers: visiblePublications.filter(pub => Number.isFinite(Number(pub.year)) && Number(pub.year) <= 2019).sort((a, b) => Number(b.year) - Number(a.year)) },
+].filter(group => group.papers.length > 0);
+---
+<BaseLayout title="Publications" bodyClass="publications-page">
+  <div class="publications-content">
+    {groups.map(group => <section class="publication-year" aria-labelledby={group.id}><h2 id={group.id}>{group.label}</h2><PublicationList publications={group.papers} /></section>)}
+  </div>
+</BaseLayout>

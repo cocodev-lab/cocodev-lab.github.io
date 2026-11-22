@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { groupNews } from '../data/news';
+---
+<BaseLayout title="CoCoDev updates">
+  <div class="content-page">
+    <ul class="news-archive">{groupNews.map(item => <li><span class="metadata">{item.year}</span><p>{item.text} {item.link && <a href={item.link.url}>({item.link.label})</a>}{item.links?.map(link => <> <a href={link.url}>({link.label})</a></>)}</p></li>)}</ul>
+  </div>
+</BaseLayout>

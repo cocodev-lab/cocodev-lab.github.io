@@ -1,0 +1,45 @@
+{
+  "retrieved": "2026-11-22",
+  "photos": [
+    {
+      "name": "Judith Kalinowski",
+      "source_page": "https://www.uni-goettingen.de/de/judith+kalinowski/674520.html",
+      "image_url": "https://www.uni-goettingen.de/storage/pictures/7b1b653a8307e0738b35a9000f2a173e.jpeg",
+      "association": "University profile headed Judith Kalinowski; portrait side-image with alt JudithKa."
+    },
+    {
+      "name": "Giulia Rambelli",
+      "source_page": "https://sites.google.com/view/cmclworkshop/organizers?authuser=0",
+      "image_url": "https://sites.google.com/sitesv-images-rt/APXyLQemDKR5WNQlFm17MLcXgEr4zIQAI15J0mQTRRaEnr5qLdMwIywatwDJDEVj13zSx5jrrBOae_7_QJpqNaWUOvwCGgZKhkgwTRVvPUJwFe0CM4p5YhdlBq_07oECom1DjvfbFnNv2z_kn_tiNjLaYdWpti9JO_aW7HZhCDwqgwYeSBoO1uMF0S07nTBjJs7X2d9KzuYayHoKiArzCAgzv4OhCkUj-JXQHORMm5XH=w1280",
+      "association": "Photo and text Giulia Rambelli, Postdoc at ILCB/Aix-Marseille University occupy the same organizer card."
+    },
+    {
+      "name": "Mathias Vigouroux",
+      "source_page": "https://fr.linkedin.com/in/mathias-vigouroux",
+      "source_file": "1741811090146.jpeg",
+      "association": "Exact 200 x 200 JPEG supplied and explicitly identified by the PI as Mathias; copied unchanged.",
+      "sha256": "b168ba4a4b737e7b793f8db81ff3185c4efe078549dcf48614d393ab2c394162"
+    },
+    {
+      "name": "Mitja Nikolaus",
+      "source_page": "https://cocodev1.gitlab.io/website/members/",
+      "image_url": "https://cocodev1.gitlab.io/website/img/members/nikolaus.jpeg",
+      "association_evidence": "Member record explicitly names Mitja Nikolaus and picture img/members/nikolaus.jpeg.",
+      "sha256": "96ff61c57ddaf81b4fd56665ea599095886de814d3fcebd291b34869717fb05e"
+    },
+    {
+      "name": "Chiara Mazzocconi",
+      "source_page": "https://cocodev1.gitlab.io/website/members/",
+      "image_url": "https://cocodev1.gitlab.io/website/img/members/chiara.jpeg",
+      "association_evidence": "Member record explicitly names Chiara Mazzocconi and picture img/members/chiara.jpeg.",
+      "sha256": "d26c54e1e2254dd5b517a3f7573eb400b308b744a0ef827e227dc8f65bc262ae"
+    },
+    {
+      "name": "Francesco Cabiddu",
+      "source_page": "https://www.ucl.ac.uk/brain-sciences/people-5",
+      "image_url": "https://www.ucl.ac.uk/brain-sciences/sites/brain_sciences/files/styles/wysiwyg_mobile/public/francesco.png.jpg?itok=ealwDp4K",
+      "association_evidence": "UCL People page image caption Francesco Cabiddu immediately precedes his named Post-doc biography.",
+      "sha256": "c8b139371d4a97ef7f4922536cd8a952da9f6bced55d0e81c4e96e6eebbb4d56"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+/* Keep the original masthead width so the navigation has room. */
+.masthead__inner-wrap {
+  width: 100%;
+  max-width: calc(70ch + 2rem);
+
+  @media (min-width: 48em) {
+    max-width: calc(70ch + 13.5rem);
+  }
+}
+
+/* One centered reading column, without the theme's sidebar width deductions. */
+#main.site-layout {
+  display: block;
+  width: 100%;
+  max-width: calc(70ch + 2rem);
+  margin: 1rem auto 0;
+
+  &::before,
+  &::after {
+    display: none;
+    content: none;
+  }
+
+  > .archive {
+    float: none;
+    clear: none;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: 47.999em) {
+    > .archive .center-div {
+      padding: 0;
+      text-align: left;
+    }
+  }
+}

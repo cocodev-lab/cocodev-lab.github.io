@@ -1,0 +1,1158 @@
+/**
+ * Migrated from afourtassi/afourtassi.github.io, _bibliography/references.bib.
+ * The bibliography is kept in source order; the page can group it by year.
+ * `hidden` preserves the explicit Goumri2026 exclusion in publications.md.
+ * Publication status, author spellings and claims follow the supplied source.
+ */
+export interface Publication {
+  id: string;
+  type: string;
+  title: string;
+  authors: string[];
+  year: string;
+  venue?: string;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  doi?: string;
+  url?: string;
+  pdf?: string;
+  preprint?: string;
+  code?: string;
+  additionalCode?: string[];
+  abstract?: string;
+  representative: boolean;
+  hidden: boolean;
+  researchSection?: string;
+}
+
+export const publications: Publication[] = [
+  {
+    "id": "Brahimi2026b",
+    "type": "article",
+    "title": "Slow but Predictive: Turn-Taking Development in Child–Adult Conversation.",
+    "authors": [
+      "Youcef Brahimi",
+      "Abdellah Fourtassi"
+    ],
+    "year": "under review",
+    "abstract": "Turn-taking is central to human interaction, yet its developmental mechanisms remain poorly understood. Adults coordinate turns within a few hundred milliseconds, suggesting predictive mechanisms, whereas children’s slower responses raise the possibility that early turn-taking relies on simpler reactive strategies. Here we test these alternatives using large-scale child–adult and adult–adult conversational corpora. We ask whether turn-taking patterns reflect silence duration alone or require predictive information available before silence onset. Silence duration was only weakly informative. In contrast, predictive models accurately anticipated upcoming floor outcomes. Prediction in child–adult conversation relied primarily on acoustic information and remained robust even with limited training data. In contrast, prediction in adult–adult conversation was more challenging and depended on higher-level linguistic information. These findings support a predictive-slow account of development, in which children's longer response latencies reflect slower execution rather than a reactive mechanism. Prediction remains necessary, but the burden is reduced because adult interlocutors scaffold it through relatively accessible acoustic cues. More broadly, the study demonstrates how computational models of conversational dynamics can constrain multimodal accounts of how children learn to coordinate language in real time.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Goumri2026",
+    "type": "article",
+    "title": "The Interaction Engine Continues to Develop in Middle Childhood: Evidence from Gaze-Speech Coordination",
+    "authors": [
+      "Dhia-Elhak Goumri",
+      "Leonor Becerra",
+      "Abdellah Fourtassi"
+    ],
+    "year": "under review",
+    "abstract": "Face-to-face conversation relies on multimodal coordination. Yet, despite extensive evidence from adults, little is known about how this coordination develops during childhood. We examined face-directed gaze in middle childhood using mobile eye-tracking during naturalistic conversations between school-age children and their caregivers in their homes. This design allowed us to assess how gaze is temporally coordinated with speech around turn transitions. Children showed an adult-like modulation of gaze by conversational role, looking more at their caregiver while listening than while speaking (Kendon, 1967). However, although children showed the same qualitative lag structure as adults, gaze--speech coupling around turn transitions was weaker in children. These findings suggest that the organization of gaze around turn transitions is already established by middle childhood, while the strength of its coupling with speech has not yet reached adult levels. More broadly, these findings suggest that at least one component of multimodal turn-taking follows a protracted developmental trajectory within the Human Interaction Engine (Levinson, 2025).",
+    "representative": false,
+    "hidden": true
+  },
+  {
+    "id": "Liu2026",
+    "type": "article",
+    "title": "Which Forms of Caregiver Feedback Support Grammar Learning? A Reinforcement-Learning Study of Child-Like Language Models",
+    "authors": [
+      "Jing Liu*",
+      "Marianne Schweitzer*",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2026",
+    "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    "url": "https://arxiv.org/pdf/2609.08576v1",
+    "abstract": "Social interaction is central to children’s language learning, but the effects of different forms of caregiver feedback are difficult to isolate in naturalistic data. We use child-like language models as controlled learners to test which forms of feedback support grammatical development. Small GPT-2-style models are pretrained on child-directed language from CHILDES, then fine-tuned with reinforcement learning using reward models trained to capture four feedback types: communicative feedback, structural alignment, semantic contingency, and affective feedback. Reward fine-tuning yields limited gains on minimal-pair evaluations, but clearer effects in free generation. Structural alignment produces the strongest improvements in grammaticality, providing a novel, plausible mechanistic account of how this feedback can support grammar learning. Communicative feedback yields more moderate gains. In contrast, semantic contingency and affective feedback do not improve grammaticality, although further analyses suggest that they may support other aspects of language learning beyond grammar. These results suggest that different forms of caregiver feedback make complementary contributions to language learning.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agrawal2026",
+    "type": "article",
+    "title": "Scaffolding Early Dialogue: A Unified Account of Response Contingency in Child–Caregiver Interaction",
+    "authors": [
+      "Agrawal, A.",
+      "Favre, B.",
+      "Fourtassi, A."
+    ],
+    "year": "2026",
+    "venue": "Cognitive Science",
+    "volume": "50",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/cogs.70245",
+    "abstract": "Early verbal dialogue emerges during the second year of life, despite children’s still-developing linguistic, pragmatic, and cognitive abilities. This raises a puzzle: how can young children produce contingent responses under the real-time demands of turn-taking? In this study, we articulate a unified scaffolding account and test whether three caregiver-side mechanisms help explain this early emergence: lexical specificity in initiating utterances, interactive routines that constrain next-intent selection, and short caregiver realizations that can serve as models for children’s own intent expression. Using recently developed automatic annotation tools for communicative intents and response contingency, we investigated this question in large-scale naturalistic corpora of child--caregiver dialogue, spanning 40 corpora and involving more than 600 children across more than 2,500 transcripts. Across corpora, each mechanism was associated with higher child contingency, and all three remained predictive in a joint model controlling for age, child utterance length, and frequency-based factors. These findings are consistent with the view that early dialogue participation is supported not only by children’s emerging capacities, but also by caregivers’ structuring of interaction in ways that reduce processing demands at multiple steps of response formation. More broadly, the results provide quantitative support for a scaffolding-based account of early dialogue emergence and help connect developmental evidence to broader theories of real-time communication.",
+    "researchSection": "social1",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2026",
+    "type": "article",
+    "title": "Modeling Children's Grammar Learning via Caregiver Feedback in Natural Conversations",
+    "authors": [
+      "Mitja Nikolaus",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2026",
+    "venue": "Philosophical Transactions of the Royal Society B",
+    "volume": "381",
+    "url": "https://royalsocietypublishing.org/rstb/article/381/1943/20240374/480099/Modelling-children-s-grammar-learning-via",
+    "code": "https://github.com/mitjanikolaus/lm_feedback",
+    "abstract": "Many debates in the language acquisition literature have revolved around the role of negative evidence (e.g., clarification requests) for the acquisition of grammar. However, the scientific study of this question has not been settled with traditional research methods, given that it requires handling children’s natural social interaction while controlling for the specific role of error-contingent feedback, independent of other types of input. Here, we compared language models trained on large corpora of child-directed language to the same models that were additionally fine-tuned through reinforcement learning. To this end, a reward model was trained on child-caregiver conversations to provide parent-like feedback. The goal of this comparison is to test whether there are learning gains in grammar induced by caregivers' feedback above and beyond learning from input alone. Focusing on clarification requests, we found that the fine-tuned models produced more grammatical utterances compared to baseline models. However, performance on challenging benchmarks of grammar knowledge evaluation (i.e. Zorro and Blimp) did not improve. The broad impact of the current work is introducing a methodological framework which enables scientists to test many types of feedback, including signals beyond the verbal modality, leading to a more comprehensive evaluation of natural caregiver feedback in language development.",
+    "researchSection": "social2",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "Brahimi2026",
+    "type": "article",
+    "title": "Predicting Turn-Taking in Child–Adult Conversations Using Voice Activity Projection",
+    "authors": [
+      "Youcef Brahimi",
+      "Cesar Blanc",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2026",
+    "venue": "Proceedings of The 16th International Workshop on Spoken Dialogue Systems Technology (IWSDS)",
+    "url": "https://aclanthology.org/2026.iwsds-1.34.pdf",
+    "abstract": "Turn-taking is a hallmark of human conversation, yet its developmental trajectory remains poorly understood. Adults typically respond within a few hundred milliseconds, suggesting reliance on predictive cues rather than simply waiting for silence. In contrast, children’s longer gaps raise the question of whether they depend on simpler, reactive strategies. This study provides the first large-scale test of competing hypotheses about children’s turn-taking, using corpora of child–adult and adult–adult dialogues. In Study 1, we compared a simple silence-based threshold model with the Voice Activity Projection (VAP) model, which predicts upcoming speech activity from acoustic features. Results showed that silence alone could not account for children’s behavior, whereas predictive acoustic models performed well, indicating that even early turn-taking relies on anticipatory mechanisms. In Study 2, we asked what cues support these predictions by comparing models based on acoustic features alone with models combining acoustic and lexical information. For adult conversations, lexical cues improved prediction, but for child–adult dialogues, acoustic information was sufficient to solve the task. Together, these findings suggest that children’s turn-taking is predictive but primarily grounded in acoustic patterns, revealing both continuity with adult mechanisms and developmental differences in how linguistic cues are integrated.",
+    "pdf": "https://aclanthology.org/2026.iwsds-1.34.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "babylm2026",
+    "type": "article",
+    "title": "BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data",
+    "authors": [
+      "Jaap Jumelet",
+      "Abdellah Fourtassi",
+      "Akari Haga",
+      "Bastian Bunzeck",
+      "Bhargav Shandilya",
+      "Diana Galvan-Sosa",
+      "Faiz Ghifari Haznitrama",
+      "Francesca Padovani",
+      "Francois Meyer",
+      "Hai Hu",
+      "Julen Etxaniz",
+      "Laurent Prevot",
+      "Linyang He",
+      "María Grandury",
+      "Mila Marcheva",
+      "Negar Foroutan",
+      "Nikitas Theodoropoulos",
+      "Pouya Sadeghi",
+      "Siyuan Song",
+      "Suchir Salhan",
+      "Susana Zhou",
+      "Yurii Paniv",
+      "Ziyin Zhang",
+      "Arianna Bisazza",
+      "Alex Warstadt",
+      "Leshem Choshen"
+    ],
+    "year": "2026",
+    "venue": "The 19th Conference of The European Chapter of the Association for Computational Linguistics (EACL)",
+    "url": "https://www.arxiv.org/pdf/2510.10159",
+    "abstract": "We present BabyBabelLM, a multilingual collection of datasets modeling the language a person observes from birth until they acquire a native language. We curate developmentally plausible pretraining data in each of 45 languages, aiming to cover the equivalent of 100M English words of content. We compile evaluation suites and train baseline models in each language. BabyBabelLM aims to facilitate multilingual pretraining and cognitive modeling.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Cabiddu2025",
+    "type": "article",
+    "title": "Comparing children and large language models in word sense disambiguation: Insights and challenges",
+    "authors": [
+      "Francesco Cabiddu",
+      "Mitja Nikolaus",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2025",
+    "venue": "Language Development Research",
+    "volume": "5",
+    "issue": "1",
+    "url": "https://ldr.lps.library.cmu.edu/article/718/galley/586/view/",
+    "code": "https://zenodo.org/records/8200803",
+    "abstract": "Understanding how children process ambiguous words is a challenge because sense disambiguation is a complex task that depends on both bottom-up and top-down cues. Here, we seek insight into this phenomenon by investigating how such a competence might arise in large distributional learners (Transformers) that purport to acquire sense representations from language input in a largely unsupervised fashion. We investigated how sense disambiguation might be achieved using model representations derived from naturalistic child-directed speech. We tested a large pool of Transformer models, varying in their pretraining input size/nature as well as the size of their parameter space. Tested across three behavioral experiments from the developmental literature, we found that these models capture some essential properties of child sense disambiguation, although most still struggle in the more challenging tasks with contrastive cues. We discuss implications for both theories of word learning and for using Transformers to study child language processing.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Chiara2025",
+    "type": "article",
+    "title": "Do children laugh like their parents? Conversational laughter mimicry occurrence and acoustic alignment in middle-childhood",
+    "authors": [
+      "Mazzocconi, C.",
+      "O'Brien, B.",
+      "Bodur, K.",
+      "Fourtassi, A"
+    ],
+    "year": "2025",
+    "venue": "Journal of Nonverbal Behavior",
+    "url": "https://link.springer.com/article/10.1007/s10919-025-00478-z",
+    "abstract": "Laughter has been shown to be informative about the pragmatic development of preschool children. The current paper investigates laughter mimicry and acoustic alignment in middle childhood in a corpus of parent-child (N=16) and parent-adult (N=8) computer-mediated conversations. We performed both distributional and acoustic analyses. While there were no significant differences in terms of laughter frequency between children and adults, laughter mimicry was significantly less frequent in parent-child than in parent-adult interactions, although balanced at an intra-dyad level. A spectro-temporal modulation (STM) analysis revealed that in children, mimicking laughter is characterised by higher STMs than Isolated laughter. On the other hand, in adult, Mimicking and Isolated laughter do not differ in terms of STMs. Our study forms a basis for discussion on current theoretical models of alignment, its interplay with interactional dynamics, and the entanglement of laughter use with pragmatic development.",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "Gupta2025",
+    "type": "article",
+    "title": "Toward a Child-Centred, Interactive Approach to Multimodal Language Development.",
+    "authors": [
+      "Shreejata Gupta",
+      "Chiara Mazzocconi",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2025",
+    "venue": "First Language",
+    "url": "https://journals.sagepub.com/doi/10.1177/01427237251326243",
+    "abstract": "Karadöller et al. discuss the role of multimodality in first language acquisition, emphasizing pointing and iconic gestures. While their focused approach provides a much-needed starting point, we argue that a more comprehensive perspective on multimodal language development should also consider two crucial dimensions: (1) a child-centered perspective that acknowledges the full spectrum of early multimodal behavior, and (2) an interactive perspective that recognizes language development as inherently social, shaped by dynamic caregiver–infant exchanges.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agee2025b",
+    "type": "article",
+    "title": "Editorial: Neural and behavioral mechanisms of social learning",
+    "authors": [
+      "Agee, Laura A.",
+      "Monfils, Marie-H.",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2025",
+    "venue": "Frontiers in Human Neuroscience",
+    "volume": "19",
+    "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1566408",
+    "abstract": "Social learning, the acquisition of new information or behavior through observation of or instruction by other organisms, has been observed in a host of species (Laland, 2004; Brown and Laland, 2003; Wilkinson et al., 2010). Humans in particular rely heavily on social learning strategies to acquire and distribute information between individuals and across generations (Dean et al., 2014). Moreover, access to social learning opportunities is essential for normative behavioral and cognitive development, as is evidenced by the persistent deficits observed in individuals deprived of social contact in early life. In accordance with the clear importance of this information transfer method, much research has been dedicated to understanding social learning at a mechanistic level (Monfils and Agee, 2019; Olsson et al., 2020; Ollendick and King, 1991; Heyes, 2012). In this editorial, we feature a collection of recent articles focused on further developing our understanding of the behavioral and/or biological underpinnings of social learning.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agrawal2025sem",
+    "type": "inproceedings",
+    "title": "Identifying Repair Opportunities in Child-Caregiver Interactions",
+    "authors": [
+      "Agrawal, A.",
+      "Favre, B.",
+      "Fourtassi, A."
+    ],
+    "year": "2025",
+    "venue": "Proceedings of the 29th Workshop on the Semantics and Pragmatics of Dialogue (SemDial)",
+    "url": "https://www.semdial.org/anthology/Z25-Agrawal_semdial_3307.pdf",
+    "abstract": "Identifying and repairing breakdowns in communication is critical for maintaining and developing common ground between interlocutors. In the context of child-caregiver interaction (the focus of the current study), parents' repair has an important role both for scaffolding early communication and for providing a learning signal. Developmental studies have typically focused on linguistic markers of parents' repair and repair initiation (e.g., clarification request); here, we analyze such instances relative to overall repair opportunities, allowing us to quantify the extent to which parents seize repair opportunities. We analyzed a corpus of 15 child-caregiver dyads, where children were 7 to 11 years old. Using manual annotation, we identified the repair opportunities presented by the child and found that the caregivers initiated repair in only a small subset of the cases where a repair opportunity presented itself. We further tasked several large language models (LLMs) to test their capacity to recognize repair opportunities in children's utterances and found their performance to be lacking compared to human annotators. This study provides an initial exploration that is valuable both for developmental studies and for researchers aiming to improve child–machine interaction for applications such as personalized education.",
+    "pdf": "https://www.semdial.org/anthology/Z25-Agrawal_semdial_3307.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Liu2025",
+    "type": "inproceedings",
+    "title": "Benchmarking LLMs for Mimicking Child-Caregiver Language in Interaction",
+    "authors": [
+      "Liu, Jing",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2025",
+    "venue": "Proceedings of the the 29th Workshop on the Semantics and Pragmatics of Dialogue (SemDial)",
+    "url": "https://www.semdial.org/anthology/Z25-Liu_semdial_3311.pdf",
+    "abstract": "Large Language Models (LLMs) can generate human-like dialogues, yet their ability to simulate early child-adult interactions remains largely unexplored. In this paper, we examined how effectively LLMs can capture the distinctive features of child-caregiver language in interaction, using both static and interactive benchmarking methods. We found that state-of-the-art LLMs like Llama 3 and GPT-4o can approximate child-caregiver dialogues at the word and utterance level, but they struggle to reproduce the child and caregiver's discursive patterns, exaggerate alignment, and fail to reach the level of diversity shown by humans. The broader goal of this work is to initiate the development of a comprehensive benchmark for LLMs in child-oriented applications.",
+    "pdf": "https://www.semdial.org/anthology/Z25-Liu_semdial_3311.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Bodur2026",
+    "type": "article",
+    "title": "Speech Reduction in Middle Childhood: the Case of Child-Caregiver Interactions",
+    "authors": [
+      "Bodur, K.",
+      "Fourtassi, A.",
+      "Fredouille, C.",
+      "Meunier, C"
+    ],
+    "year": "2026",
+    "venue": "First Language",
+    "url": "https://journals.sagepub.com/doi/10.1177/01427237251363936",
+    "abstract": "Reduction, a common phenomenon in everyday speech, affects phonemes, syllables, and words across various languages and speakers. Despite its ubiquity, reduction remains underexplored, particularly in children's speech. This study addresses this gap by analyzing reduction patterns in children aged 7 and 11 during video call interactions with caregivers, focusing on both lexicalized and non-lexicalized reductions. We found that children exhibited similar patterns of lexicalized reductions to adults, based on 11 common French reduction forms, with no significant differences between the two child groups. However, reduction rates varied by specific items, with some showing high reduction ratios despite low frequency. Non-lexicalized reductions, involving more complex linguistic mechanisms, were rare among children but varied among caregivers, suggesting that children had not yet mastered these advanced forms. There was no correlation between children’s and caregivers' reduction strategies, indicating that caregivers' behaviors did not directly influence children's. Additionally, articulation rates differed significantly across groups, increasing with age and correlating with higher reduction rates. These results suggest that while 7- and 11-year-olds exhibit similar language and reduction patterns, they are still developing the more sophisticated reduction mechanisms seen in adults.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agee2025",
+    "type": "article",
+    "title": "Social Context as a Source of Variability in the Psychological Sciences",
+    "authors": [
+      "Laura Agee",
+      "Abdellah Fourtassi",
+      "Marie Monfils"
+    ],
+    "year": "2025",
+    "venue": "Frontiers in Behavioral Neuroscience",
+    "volume": "18",
+    "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2024.1507010",
+    "abstract": "Poor reproducibility in the psychological sciences is often attributed to systemic factors such as publication bias and lack of financial support sources for replication studies [1]. While such factors undoubtedly contribute to the problem, controllable issues such as variability in testing methodology, laboratory environment, and subject characteristics may serve as other possible sources of non-replication [2–4]. One such source of variability which is rarely accounted for in either human or animal studies is the social context, i.e., the environment arising from the behavioral and biological characteristics of conspecifics with whom the subject regularly interacts. Here, we will non-comprehensively cover some of the ways in which preventable variations in social context might influence behavioral measures in human and non-human animal research. We will then discuss strategies to account for social context in future research.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Apidianaki2024",
+    "type": "article",
+    "title": "Language Learning, Representation, and Processing in Humans and Machines: Introduction to the Special Issue",
+    "authors": [
+      "Apidianaki, Marianna",
+      "Fourtassi, Abdellah",
+      "Padó, Sebastian"
+    ],
+    "year": "2024",
+    "venue": "Computational Linguistics",
+    "url": "https://direct.mit.edu/coli/article/doi/10.1162/coli_e_00539/124560/Language-Learning-Representation-and-Processing-in",
+    "abstract": "Large Language Models (LLMs) and humans acquire knowledge about language without direct supervision. LLMs do so by means of specific training objectives, while humans rely on sensory experience and social interaction. This parallelism has created a feeling in NLP and cognitive science that a systematic understanding of how LLMs acquire and use the encoded knowledge, could provide useful insights for studying human cognition. Conversely, methods and findings from the field of cognitive science have occasionally inspired language model development. Yet, the differences in the way that language is processed by machines and humans—in terms of learning mechanisms, amounts of data used, grounding and access to different modalities—make a direct translation of insights challenging. The aim of this edited volume has been to create a forum of exchange and debate along this line of research, inviting contributions that further elucidate similarities and differences between humans and LLMs.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Schweitzer2024",
+    "type": "article",
+    "title": "Multimodal Integration in Audio-Visual Speech Recognition. How Far Are We From Human-Level Robustness?",
+    "authors": [
+      "Schweitzer, M.",
+      "Montagnini, A.",
+      "Fourtassi, A.",
+      "Schatz, T."
+    ],
+    "year": "2024",
+    "venue": "NeurIPS 2024 Workshop on Behavioral Machine Learning",
+    "preprint": "https://hal.science/hal-04801000v1/file/86_Multimodal_Integration_in_A.pdf",
+    "abstract": "This paper introduces a novel evaluation framework, inspired by methods from human psychophysics, to systematically assess the robustness of multimodal integration in audiovisual speech recognition (AVSR) models relative to human abilities. We present preliminary results on AV-HuBERT suggesting that multimodal integration in state-of-the-art (SOTA) AVSR models remains mediocre when compared to human performance and we discuss avenues for improvement.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Goumri2024child",
+    "type": "article",
+    "title": "Child-Caregiver Gaze Dynamics in Naturalistic Face-to-Face Conversations",
+    "authors": [
+      "Dhia-Elhak Goumri",
+      "Leonor Becerra",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://osf.io/preprints/psyarxiv/xqjh8",
+    "abstract": "This study examines the development of children's gaze during face-to-face conversations, following up on previous work suggesting a protracted development in attending to the interlocutor's face. Using recent mobile eye-tracking technology, we observed children interacting with their parents at home in natural settings. In contrast to previous work, we found that children, even in early middle childhood, exhibit adult-like gaze patterns toward the interlocutor. However, differences emerge in gaze allocation between speaking and listening roles, indicating that while children may focus on faces similarly to adults, their use of gaze for social signaling, such as turn-taking cues, may still be maturing. The work underscores the critical role of social context in understanding the development of non-verbal behavior in face-to-face conversation.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agrawal2024analyis",
+    "type": "article",
+    "title": "Communicative Intent Coordination in Child-Caregiver Interactions",
+    "authors": [
+      "Abhishek Agrawal",
+      "Benoit Favre",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://osf.io/preprints/psyarxiv/5ua6x",
+    "abstract": "Social interaction plays a key role in children's development of language structure and use. In particular, children must successfully navigate the complex task of coordinating their communicative intents with people around them in early conversations. This study leveraged advanced NLP techniques to analyze a large corpus of child-caregiver conversations in the wild, combining methods for communicative intent inference and for turn contingency evaluation. Key findings include the prevalence of classic adjacency pairs like question-response, caregivers initiated the overwhelming majority of these sequences. We also document new developmental shifts in intent expression and an interesting dissociation between frequency vs. well-coordinated use across the early years of development. This framework offers a new approach to studying language development in its naturalistic, social context.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Peirolo2024",
+    "type": "article",
+    "title": "Development of Flexible Role-Taking in Conversations Across Preschool",
+    "authors": [
+      "Peirolo, M.",
+      "Xu, Z.",
+      "Fourtassi, A."
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://osf.io/preprints/psyarxiv/tnqzh",
+    "abstract": "The paper investigates the development of conversational skills in preschool children, focusing on their ability to adopt flexible roles in dialogues. We specifically analyze children's coordinated behavior in question-response-follow-up sequences, both as Initiators and Responders, using a longitudinal French corpus of child-caregiver spontaneous interactions. While preschool children showed growing sophistication in their ability to initiate and respond appropriately within conversations, they still had qualitative differences with adults, especially as initiators, suggesting further development beyond preschool. The findings contribute to our understanding of how conversational skills develop in early childhood and the role these skills play in broader cognitive and social development.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agrawal2024",
+    "type": "article",
+    "title": "Automatic Coding of Contingency in Child-Caregiver Conversations",
+    "authors": [
+      "Abhishek Agrawal",
+      "Mitja Nikolaus",
+      "Benoit Favre",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Joint International Conference on Computational Linguistics, Language Resources, and Evaluation (LREC-COLING)",
+    "preprint": "https://psyarxiv.com/hwnms",
+    "code": "https://github.com/abhishek-agrawal94/childes-contingency",
+    "abstract": "One of the most important communicative skills children have to learn is to engage in meaningful conversations with people around them. At the heart of this learning lies the mastery of contingency, i.e., the ability to contribute to an ongoing exchange in a relevant fashion (e.g., by staying on topic). Current research on this question relies on the manual annotation of a small sample of children, which limits our ability to draw general conclusions about development. Here, we propose to mitigate the limitations of manual labor by relying on automatic tools for contingency judgment in children's early natural interactions with caregivers. Drawing inspiration from the field of dialogue systems evaluation, we built and compared several automatic classifiers. We found that a Transformer-based pre-trained language model -- when fine-tuned on a relatively small set of data we annotated manually (around 3,500 turns) -- provided the best predictions. We used this model to automatically annotate, new and large-scale data, almost two orders of magnitude larger than our fine-tuning set. It was able to replicate existing results and generate new data-driven hypotheses. The broad impact of the work is to provide resources that can help the language development community study communicative development at scale, leading to more robust theories.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2024",
+    "type": "article",
+    "title": "Automatic Annotation of Grammaticality in Child-Caregiver Conversations",
+    "authors": [
+      "Mitja Nikolaus",
+      "Abhishek Agrawal",
+      "Petros Kaklamanis",
+      "Alex Warstadt",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Joint International Conference on Computational Linguistics, Language Resources, and Evaluation (LREC-COLING)",
+    "preprint": "https://psyarxiv.com/r49ew",
+    "abstract": "The acquisition of grammar has been a central question in the study of language acquisition. In order to conduct faster, more reproducible, and larger-scale corpus studies on child-caregiver conversations, tools for automatic annotation can offer an effective alternative to tedious manual annotation. While research in NLP has focused on the automatic classification of grammaticality of hand-crafted sentences authored by linguists, judging the grammaticality of children's utterances requires the consideration of the conversational context and new design choices tailored to the types of errors common in child language. We propose a coding scheme for context-dependent grammaticality in conversations and annotate more than 4,000 utterances from a large corpus of transcribed conversations. Based on these annotations, we train and evaluate a range of NLP models. We find that fine-tuned Transformer-based models' performance is close to human inter-annotation agreement. Then, we apply the trained models to automatically annotate a corpus that is almost two orders of magnitude larger than the manually annotated data, and find that our measure for children's grammaticality indicates a steady increase with age. This work contributes to the growing literature on the effectiveness of state-of-the-art NLP methods for child language acquisition research at scale.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Goumri2024",
+    "type": "article",
+    "title": "A Developmental Corpus of Child-Caregiver's Face-to-face vs. Video Call Conversations in Middle Childhood",
+    "authors": [
+      "Dhia-Elhak Goumri",
+      "Abhishek Agrawal",
+      "Mitja Nikolaus",
+      "Thang VU",
+      "Kübra Bodur",
+      "Elias Semmar",
+      "Cassandre Armand",
+      "Chiara Mazzocconi",
+      "Shreejata Gupta",
+      "Laurent Prévot",
+      "Benoit Favre",
+      "Leonor Becerra",
+      "Abdellah Fourtassi"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the Joint International Conference on Computational Linguistics, Language Resources, and Evaluation (LREC-COLING)",
+    "preprint": "https://psyarxiv.com/9y6ek",
+    "abstract": "Existing studies of naturally occurring talk-in-interaction have largely focused on the two ends of the developmental spectrum, i.e., early childhood and adulthood, leaving a gap in our knowledge about how development unfolds, especially across middle childhood. The current work contributes to filling this gap by introducing a developmental corpus of child-caregiver conversations at home, involving groups of children aged 7, 9, and 11 years old. Each dyad was recorded twice: once in a face-to-face setting and once using computer-mediated video calls. For the face-to-face settings, we capitalized on recent advances in mobile, lightweight eye-tracking and head motion detection technology to optimize the naturalness of the recordings, allowing us to obtain both precise and ecologically valid data. Further, we mitigated the challenges of manual annotation by relying -- to the extent possible -- on automatic tools in speech processing and computer vision. Finally, to demonstrate the richness of this corpus for the study of child communicative development, we provide preliminary analyses comparing several measures of child-caregiver conversational dynamics across developmental age, modality, and communicative medium. We hope the current work will pave the way for future discoveries into the properties and mechanisms of multimodal communicative development across middle childhood.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Goumri2023",
+    "type": "inproceedings",
+    "title": "Automatic Detection of Gaze and Smile in Children's Video Calls",
+    "authors": [
+      "Goumri, D.",
+      "Janssoone, T.",
+      "Becerra, L.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "International Conference on Multimodal Interaction (ICMI'23 Companion)",
+    "preprint": "https://psyarxiv.com/angd5",
+    "abstract": "With the increasing use of video chats by children, the need for tools that facilitate the scientific study of their communicative behavior becomes more pressing. This paper investigates the automatic detection -- from video calls -- of two major signals in children's social coordination: smiles and gaze. While there has been significant advancement in the field of computer vision to model such signals, very little work has been done to put these techniques to test in the noisy, variable context of video calls, and even fewer studies (if any) have investigated children's video calls specifically. In this paper, we provide a first exploration into this question, testing and comparing two modeling approaches: a) a feature-based approach that relies on state-of-the-art software like OpenFace for feature extraction, and b) an end-to-end approach where models are directly optimized to classify the behavior of interest from raw data. We found that using mid-level features generated by OpenFace (e.g., Action Units) provides a better solution in the case of smiles, whereas using simple end-to-end architectures proved to be much more helpful in the case of looking behavior. A broader goal of this preliminary work is to provide the basis for a public, comprehensive toolkit for the automatic processing of children's communicative signals from video chat, facilitating research in children's online multimodal interaction.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Mazzocconi2023cogsci",
+    "type": "inproceedings",
+    "title": "Differences between Mimicking and Non-Mimicking laughter in Child-Caregiver Conversation: A Distributional and Acoustic Analysis",
+    "authors": [
+      "Mazzocconi, C.",
+      "O'Brien, B.",
+      "El Haddad, K.",
+      "Bodur, K.",
+      "Fourtassi, A"
+    ],
+    "year": "2023",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/j4852/",
+    "abstract": "Despite general agreement that laughter is crucial in social interactions and cognitive development, there is surprisingly little work looking at its use through childhood. Here we investigate laughter in middle childhood, using a corpus of online calls between child and parent and between the (same parent) and another adult. We focus on laughter mimicry, i.e., laughter shortly following laughter from the partner, and we compare mimicking and non-mimicking laughter in terms of distribution and acoustic properties using spectrotemporal modulation measures. Our results show, despite similar frequencies in laughter production, different laughter mimicry patterns between Parent-Child and Parent-Adult interactions. Overall, in comparison with previous work in infants and toddlers, our results show laughter mimicry is more balanced between parents and school-age children. At the acoustic level, we observe differences between mimicking and non-mimicking laughter in children, but not in adults. Moreover, we observe significant differences in laughter acoustics in parents depending on whether they interact with children or adults, which highlights a strong interlocutor effect on laughter mimicry.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2023CogSci",
+    "type": "inproceedings",
+    "title": "Communicative Feedback in Response to Children’s Grammatical Errors",
+    "authors": [
+      "Nikolaus, M.",
+      "Prévot, L.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/v83uj/",
+    "code": "https://github.com/mitjanikolaus/childes-communicative-feedback",
+    "abstract": "Children learning their mother tongue engage in interactive communication starting from the early stages of their development. In a large-scale study of transcribed child-caregiver conversations, we investigated the role of Communicative Feedback in response to children's grammatical errors. We found evidence for both positive and negative feedback signals that are useful for learning the grammar of one's native language: Caregivers are more likely to provide acknowledgments if an utterance is grammatical, and they are more likely to ask for clarification if an utterance is ungrammatical. Further, we investigate how children react in response to negative communicative feedback signals and find evidence that grammaticality is improved in direct follow-ups to negative feedback signals. This study provides the largest and most comprehensive evidence supporting the presence and effectiveness of communicative feedback signals in grammar learning, broadening the literature on communicative feedback in language acquisition more generally.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Cabiddu2023CogSci",
+    "type": "inproceedings",
+    "title": "Comparing Children and Large Language Models in Word Sense Disambiguation: Insights and Challenges",
+    "authors": [
+      "Cabiddu, F.",
+      "Nikolaus, M.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/zgy7v/",
+    "abstract": "Understanding how children process ambiguous words is a challenge because sense disambiguation depends on both bottom-up and top-down cues. Here, we seek insight into this phenomenon by investigating how such a competence might arise in large distributional learners (Transformers) that purport to acquire sense representations from language input in a largely unsupervised fashion. We investigated how sense disambiguation might be achieved using model representations derived from naturalistic child-directed speech. We tested a large pool of Transformer models, varying in their pretraining input size/nature as well as the size of their parameter space. Tested across three behavioral experiments from the developmental literature, we found that these models capture some essential properties of child sense disambiguation, although most still struggle in the more challenging tasks with contrastive cues. We discuss implications for both theories of word learning and for using Transformers to capture child language processing.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Agrawal2023CogSci",
+    "type": "inproceedings",
+    "title": "Development of Multimodal Turn Coordination in Conversations: Evidence for Adult-like behavior in Middle Childhood",
+    "authors": [
+      "Agrawal, A.",
+      "Liu, J.",
+      "Bodur, K.",
+      "Favre, B.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/h8j6x/",
+    "abstract": "The question of how children develop multimodal coordination skills to engage in meaningful face-to-face conversations is crucial for our broader understanding of children's healthy socio-cognitive development. Here we focus on investigating the ability of school-age children to coordinate turns with their interlocutors, especially regarding when to take the floor (i.e., the main channel of the conversation) and when to provide attentive listening signals via the back channel. Using data of child-caregiver naturalistic conversations and data-driven research tools, we found that children aged 6 to 12 years old already show adult-like behavior both in terms of reacting to the relevant channel-specific cues and in terms of providing reliable, multimodal inviting cues to help their interlocutor select the most appropriate channel of the conversation.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Tiran2023CogSci",
+    "type": "inproceedings",
+    "title": "Typology of Topological Relations Using Machine Translation",
+    "authors": [
+      "Tiran, T.",
+      "Meewis, F.",
+      "Fourtassi, A.",
+      "Dautriche, I."
+    ],
+    "year": "2023",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/95nrd/",
+    "abstract": "Languages describe spatial relations in different manners. It is however hypothesized that highly frequent ways of categorizing spatial relations across languages correspond to the natural ways humans conceptualize them. In this study, we explore the use of machine translation to gather data in semantic typology to address whether different languages show similarities in how they carve up space. We collected spatial descriptions in English, translated them using machine translation, and subsequently extracted spatial terms automatically. Our results suggest that most spatial descriptions are accurately translated. Despite limitations in our extraction of spatial terms, we obtain meaningful patterns of spatial relation categorization across languages. We discuss translation limits for semantic typology and possible future directions.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "bodur2023Frontiers",
+    "type": "article",
+    "title": "Using video calls to study children’s conversational development: The case of backchannel signaling",
+    "authors": [
+      "Bodur, K.",
+      "Nikolaus, M.",
+      "Prévot, L.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "Frontiers in Computer Science",
+    "volume": "5",
+    "url": "https://www.frontiersin.org/articles/10.3389/fcomp.2023.1088752/full?utm_source=F-NTF&utm_medium=EMLX&utm_campaign=PRD_FEOPS_20170000_ARTICLE",
+    "code": "https://github.com/afourtassi/ChiCo-Annotation",
+    "abstract": "Understanding how children’s conversational skills develop is crucial for understanding their social, cognitive, and linguistic development, with important applications in health and education. To develop theories based on quantitative studies of conversational development, we need (i) data recorded in naturalistic contexts (e.g. child-caregiver dyads talking in their daily environment) where children are more likely to show much of their conversational competencies, as opposed to controlled laboratory contexts which typically involve talking to a stranger (e.g., the experimenter); (ii) data that allows for clear access to children’s multimodal behavior in face-to-face conversations; and (iii) data whose acquisition method is cost-effective with the potential of being deployed at a large scale to capture individual and cultural variability. The current work is a first step to achieve this goal. We built a corpus made of video chats involving children in middle childhood (6-12 years old) and their caregivers using a weakly structured word-guessing game to prompt spontaneous conversation. The manual annotations of these recordings have shown the similarity of the frequency distribution of multimodal communicative signals from both children and caregivers. As a case study, we capitalize on this rich behavioral data to study how both verbal and non-verbal cues contribute to the development of conversational coordination. In particular, we looked at how children learn to engage in coordinated conversations not only as speakers but also as listeners by analyzing children’s use of backchannel signaling (e.g., verbal 'mh' or head nods) during these conversations. Contrary to results from previous in-lab studies, our use of both more natural/spontaneous conversational settings and more adequate controls allowed us to reveal that school-age children are strikingly close to adult-level mastery in many measures of backchanneling. Our work demonstrates the usefulness of recent technology in video calling for acquiring quality data that can be used for research on children’s conversational development in the wild.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "wilson2023JCD",
+    "type": "article",
+    "title": "Conceptual Hierarchy in Child-Directed Speech: Implicit Cues are More Reliable",
+    "authors": [
+      "Wilson, K.",
+      "Frank, M. C.",
+      "Fourtassi, A"
+    ],
+    "year": "2023",
+    "venue": "Journal of Cognition & Development",
+    "volume": "24",
+    "issue": "4",
+    "pages": "563-580",
+    "url": "https://doi.org/10.1080/15248372.2023.2178436",
+    "preprint": "https://psyarxiv.com/tx47e",
+    "code": "https://github.com/afourtassi/concepts",
+    "abstract": "In order for children to understand and reason about the world in an adult-like fashion, they need to learn that conceptual categories are organized in a hierarchical fashion (e.g., a dog is also an animal). The caregiver’s linguistic input can play an important role in this learning, and previous studies have documented several cues in parental talk that can help children learn the conceptual hierarchy. However, these previous studies used different datasets and methods which made difficult the systematic comparison of these cues and the study of their relative contribution. Here, we use a large-scale corpus of child-directed speech and a classification-based evaluation method which allowed us to investigate, within the same framework, various cues that vary radically in terms of how explicit the information they offer is. We found the most explicit cues to be too sparse or too noisy to support robust learning. In contrast, the implicit cues offered, overall, a reliable source of information. Our work confirms the utility of caregiver talk for conveying conceptual information. It provides a stepping stone towards a cognitive model that would use this information in a principled way, leading to testable predictions about children’s conceptual development.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2023NIP",
+    "type": "article",
+    "title": "Communicative Feedback in Language Acquisition",
+    "authors": [
+      "Nikolaus, M.",
+      "Fourtassi, A."
+    ],
+    "year": "2023",
+    "venue": "New Ideas in Psychology",
+    "volume": "69",
+    "url": "https://doi.org/10.1016/j.newideapsych.2022.100985",
+    "preprint": "https://psyarxiv.com/k63uv/",
+    "abstract": "Children start to communicate and use language in social interactions from a very young age. This allows them to experiment with their developing linguistic knowledge and receive valuable feedback from their -- often more knowledgeable -- interlocutors. While research in language acquisition has focused a great deal on children's ability to learn from the linguistic input or social cues, very little work has investigated the nature and role of communicative feedback, a process that results from children and caregivers trying to coordinate mutual understanding. In this work, we draw on insights from theories of communicative coordination to formalize a mechanism for language acquisition: We argue that children can improve their linguistic knowledge in conversation by leveraging explicit or implicit signals of communication success or failure. This new formalization provides a common framework for several lines of research in child development that have been pursued separately. Further, it points towards several gaps in the literature that, we believe, should be addressed in future research in order to achieve a more complete understanding of language acquisition within and through social interaction.",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "Bodur2022Cogsci",
+    "type": "inproceedings",
+    "title": "Backchannel Behavior in Child-Caregiver Video Calls",
+    "authors": [
+      "Bodur, K.",
+      "Nikolaus, M.",
+      "Prevot, L.",
+      "Fourtassi, A."
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/cvnqm",
+    "code": "https://github.com/afourtassi/ChiCo-Annotation",
+    "abstract": "An important step in children's socio-cognitive development is learning how to engage in coordinated conversations. This requires not only becoming competent speakers but also active listeners. This paper studies children's use of backchannel signaling (e.g., \"yeah!\" or a head nod) when in the listener's role during conversations with their caregivers via Zoom. While previous work had found backchannel to be still immature in middle childhood, our use of both more natural/spontaneous conversational settings and more adequate controls allowed us to reveal that school-age children are strikingly close to adult-level mastery in many measures of backchanneling. The broader impact of this paper is to highlight the crucial role of social context in evaluating children's conversational abilities.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2022Cogsci",
+    "type": "inproceedings",
+    "title": "Communicative Feedback as a Mechanism Supporting the Production of Intelligible Speech in Early Childhood",
+    "authors": [
+      "Nikolaus, Mitja",
+      "Prevot, Laurent",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/sg5mv",
+    "code": "https://github.com/mitjanikolaus/childes-communicative-feedback",
+    "abstract": "Children start to communicate and use language in social interactions from very early stages in development. This allows them to experiment with their current linguistic knowledge and receive valuable feedback from their interlocutors. We conducted a large-scale corpus study to examine the quality of positive and negative Communicative Feedback signals that caregivers provide in terms of responsiveness and clarification requests. We found evidence for the effect of such feedback in supporting children’s production of intelligible speech. The broad impact of this paper is to highlight how general social feedback mechanisms that govern human communication can also support child language acquisition.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Nikolaus2022emnlp",
+    "type": "inproceedings",
+    "title": "Do Vision-and-Language Transformers Learn Predicate-Noun Dependencies?",
+    "authors": [
+      "Nikolaus, M.",
+      "Salin, E.",
+      "Ayache, S.",
+      "Fourtassi, A.",
+      "Favre, B."
+    ],
+    "year": "2022",
+    "venue": "Proceedings of The Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    "preprint": "https://arxiv.org/pdf/2210.12079.pdf",
+    "code": "https://github.com/mitjanikolaus/multimodal-predicate-noun-dependencies",
+    "abstract": "Recent advances in vision-and-language modeling have seen the development of Transformer architectures that achieve remarkable performance on multimodal reasoning tasks. Yet, the exact capabilities of these black-box models are still poorly understood. While much of previous work has focused on studying their ability to learn meaning at the wordlevel, their ability to track syntactic dependencies between words has received less attention. We take a first step in closing this gap by creating a new multimodal task targeted at evaluating understanding of predicate-noun dependencies in a controlled setup. We evaluate a range of state-of-the-art models and find that their performance on the task varies considerably, with some models performing relatively well and others at chance level. In an effort to explain this variability, our analyses indicate that the quality (and not only sheer quantity) of pretraining data is essential. Additionally, the best performing models leverage finegrained multimodal pretraining objectives in addition to the standard image-text matching objectives. This study highlights that targeted and controlled evaluations are a crucial step for a precise and rigorous test of the multimodal knowledge of vision-and-language models.",
+    "representative": false,
+    "hidden": false,
+    "additionalCode": [
+      "https://github.com/cocodev-team/multimodal-Transformer-noun-dependencies"
+    ]
+  },
+  {
+    "id": "Misiek2022Semdial",
+    "type": "inproceedings",
+    "title": "Caregivers Exaggerate Their Lexical Alignment to Young Children Across Several Cultures",
+    "authors": [
+      "Misiek, T.",
+      "Fourtassi, A."
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the Workshop on the Semantics and Pragmatics of Dialogue (SemDial)",
+    "preprint": "https://psyarxiv.com/smu9e",
+    "code": "https://github.com/thomasMisiek/children-linguistic-alignment",
+    "abstract": "As soon as they start producing their first words, children engage in dialogues with people around them. Recent work has suggested that caregivers facilitate this early linguistic communication via frequently re-using and building on children's own words. This tendency decreases over development as children become more competent speakers. While this pattern has been observed with data of English-learning children, the question remains as to whether this early child-caregiver dynamics is universal vs. culture-specific. We address this question using large-scale data in six languages belonging to both Eastern and Western cultures. We found that the finding generalizes well cross-linguistically, suggesting that caregivers' early \"exaggerating\" of lexical alignment is likely a scaffolding strategy used across cultures to facilitate children's early linguistic communication and learning.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Hallart2022Semdial",
+    "type": "inproceedings",
+    "title": "Contingency in Child-Caregiver Naturalistic Conversation: Evidence for Mutual Influence",
+    "authors": [
+      "Hallart, C.",
+      "Peirolo, M.",
+      "Xu, Z.",
+      "Fourtassi, A."
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the Workshop on the Semantics and Pragmatics of Dialogue (SemDial)",
+    "preprint": "https://psyarxiv.com/cev8k",
+    "abstract": "To be able to hold conversations with people around them, children need to learn contingency, i.e., the ability to contribute to a dialog with relevant utterances. We study this skill in the context of child-caregiver naturalistic interactions, using question-initiated sequences as units of analysis. While much of previous work has focused on the caregiver or on the child, here we study contingency in the dyad as a whole, allowing for a deeper understanding of how interlocutors influence each other.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Liu2022",
+    "type": "inproceedings",
+    "title": "Predicting Backchannel Signaling in Child-Caregiver Multimodal Conversations",
+    "authors": [
+      "Liu, J.",
+      "Nikolaus, M.",
+      "Bodur, K.",
+      "Fourtassi, A."
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the International Conference on Multimodal Interaction (ICMI'22 Companion)",
+    "preprint": "https://psyarxiv.com/pgvy2",
+    "code": "https://github.com/Jing-L97/BC-Prediction",
+    "abstract": "Conversation requires cooperative social interaction between interlocutors. In particular, active listening through backchannel signaling (hereafter BC) i.e., showing attention through verbal (short responses like ``Yeah'') and non-verbal behaviors (e.g. smiling or nodding) is crucial to managing the flow of a conversation and it requires sophisticated coordination skills. How does BC develop in childhood? Previous studies were either conducted in highly controlled experimental settings or relied on qualitative corpus analysis, which does not allow for a proper understanding of children's BC development, especially in terms of its collaborative/coordinated use. This paper aims at filling this gap using a machine learning model that learns to predict children's BC production based on the interlocutor's inviting cues in child-caregiver naturalistic conversations. By comparing BC predictability across children and adults, we found that, contrary to what has been suggested in previous in-lab studies, children between the ages of 6 and 12 can actually produce and respond to backchannel inviting cues as consistently as adults do, suggesting an adult-like form of coordination.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "nikolaus2022acts",
+    "type": "article",
+    "title": "Large-scale study of speech acts' development in early childhood",
+    "authors": [
+      "Nikolaus, Mitja",
+      "Maes, Eliot",
+      "Auguste, Jeremy",
+      "Prevot, Laurent",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2022",
+    "venue": "Language Development Research",
+    "volume": "2",
+    "issue": "1",
+    "url": "https://ldr.lps.library.cmu.edu/article/532/galley/486/view/",
+    "preprint": "https://psyarxiv.com/xs8k6/",
+    "code": "https://github.com/mitjanikolaus/childes-speech-acts",
+    "abstract": "Studies of children's language use in the wild (e.g., in the context of child-caregiver social interaction) have been slowed by the time- and resource- consuming task of hand annotating utterances for communicative intents/speech acts. Existing studies have typically focused on investigating rather small samples of children, raising the question of how their findings generalize both to larger and more representative populations and to a richer set of interaction contexts. Here we propose a simple automatic model for speech act labeling in early childhood based on the INCA-A coding scheme (Ninio, Snow, Pan, & Rollins, 1994). After validating the model against ground truth labels, we automatically annotated the entire English-language data from the CHILDES corpus. The major theoretical result was that earlier findings generalize quite well at a large scale. Further, we introduced two complementary measures for the age of acquisition of speech acts which allows us to rank different speech acts according to their order of emergence in production and comprehension.Our model will be shared with the community so that researchers can use it with their data to investigate various question related to language use both in typical and atypical populations of children.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "jiang2022",
+    "type": "article",
+    "title": "Exploring patterns of stability and change in caregivers' word usage across early childhood",
+    "authors": [
+      "Jiang, Hang",
+      "Frank, Michael C",
+      "Kulkarni, Vivek",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2022",
+    "venue": "Cognitive Science",
+    "volume": "46",
+    "issue": "7",
+    "url": "https://doi.org/10.1111/cogs.13177",
+    "preprint": "https://psyarxiv.com/fym86",
+    "code": "https://github.com/afourtassi/change",
+    "abstract": "The linguistic input children receive across early childhood plays a crucial role in shaping their knowledge about the world. To study this input, researchers have begun applying distributional semantic models to large corpora of child-directed speech, extracting various patterns of word use/co-occurrence. Previous work using these models has not measured how these patterns may change throughout development, however. In this work, we leverage NLP methods that were originally developed to study historical language change to compare caregivers' use of words when talking to younger vs. older children. Some words' usage changed more than others'; this variability could be predicted based on the word's properties at both the individual and category level. These findings suggest that caregivers' changing patterns of word use may play a role in scaffolding children's acquisition of conceptual structure in early development.",
+    "researchSection": "input2",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "nikolaus2021production",
+    "type": "inproceedings",
+    "title": "Modeling the Interaction Between Perception-Based and Production-Based Learning in Children's Early Acquisition of Semantic Knowledge",
+    "authors": [
+      "Nikolaus, M.",
+      "Fourtassi, A."
+    ],
+    "year": "2021",
+    "venue": "Proceedings of the Conference on Computational Natural Language Learning (CoNLL)",
+    "preprint": "https://psyarxiv.com/at47v",
+    "code": "https://github.com/mitjanikolaus/perception-and-production-based-learning",
+    "abstract": "Children learn the meaning of words and sentences in their native language at an impressive speed and from highly ambiguous input. To account for this learning, previous computational modeling has focused mainly on the study of perception-based mechanisms like cross-situational learning. However, children do not learn only by exposure to the input. As soon as they start to talk, they practice their knowledge in social interactions and they receive feedback from their caregivers. In this work, we propose a model integrating both perception- and production-based learning using artificial neural networks which we train on a large corpus of crowd-sourced images with corresponding descriptions. We found that production-based learning improves performance above and beyond perception-based learning across a wide range of semantic tasks including both word- and sentence-level semantics. In addition, we documented a synergy between these two mechanisms, where their alternation allows the model to converge on more balanced semantic knowledge. The broader impact of this work is to highlight the importance of modeling language learning in the context of social interactions where children are not only understood as passively absorbing the input, but also as actively participating in the construction of their linguistic knowledge.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "bodur2021",
+    "type": "inproceedings",
+    "title": "ChiCo: A Multimodal Corpus for the Study of Child Conversation",
+    "authors": [
+      "Bodur, K.",
+      "Nikolaus, M.",
+      "Kassim, F.",
+      "Prévot, L.",
+      "Fourtassi, A."
+    ],
+    "year": "2021",
+    "venue": "Proceedings of the International Conference on Multimodal Interaction (ICMI'21 Companion)",
+    "pages": "158–163",
+    "preprint": "https://psyarxiv.com/uzfes",
+    "code": "https://github.com/afourtassi/ChiCo-Annotation",
+    "abstract": "The study of how children develop their conversational skills is an important scientific frontier at the crossroad of social, cognitive, and linguistic development with important applications in health, education, and child-oriented AI. While recent advances in machine learning techniques allow us to develop formal theories of conversational development in real-life contexts, progress has been slowed down by the lack of corpora that both approximate naturalistic interaction and provide clear access to children's non-verbal behavior in face-to-face conversations. This work is an effort to fill this gap. We introduce ChiCo (for Child Conversation), a corpus we built using an online video chat system. Using a weakly structured task (a word-guessing game), we recorded 20 conversations involving either children in middle childhood (i.e., 6 to 12 years old) interacting with their caregivers (condition of interest) or the same caregivers interacting with other adults (a control condition), resulting in 40 individual recordings. Our annotation of these videos has shown that the frequency of children's use of gaze, gesture and facial expressions mirrors that of adults. Future modeling research can capitalize on this rich behavioral data to study how both verbal and non-verbal cues contribute to the development of conversational coordination.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "nikolaus2021evaluating",
+    "type": "inproceedings",
+    "title": "Evaluating the Acquisition of Semantic Knowledge from Cross-situational Learning in Artificial Neural Networks",
+    "authors": [
+      "Nikolaus, Mitja",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2021",
+    "venue": "Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics",
+    "pages": "200--210",
+    "preprint": "https://psyarxiv.com/mbesf",
+    "code": "https://github.com/mitjanikolaus/cross-situational-learning-abstract-scenes",
+    "abstract": "When learning their native language, children acquire the meanings of words and sentences from highly ambiguous input without much explicit supervision. One possible learning mechanism is cross-situational learning, which has been successfully tested in laboratory experiments with children. Here we use Artificial Neural Networks to test if this mechanism scales up to more natural language and visual scenes using a large dataset of crowd-sourced images with corresponding descriptions. We evaluate learning using a series of tasks inspired by methods commonly used in laboratory studies of language acquisition. We show that the model acquires rich semantic knowledge both at the word- and sentence-level, mirroring the patterns and trajectory of learning in early childhood. Our work highlights the usefulness of low-level co-occurrence statistics across modalities in facilitating the early acquisition of higher-level semantic knowledge.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "nikolaus2021large",
+    "type": "inproceedings",
+    "title": "Large-scale study of speech acts' development using automatic labelling",
+    "authors": [
+      "Nikolaus, Mitja",
+      "Maes, Juliette",
+      "Auguste, Jeremy",
+      "Prevot, Laurent",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2021",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/j4smd/",
+    "code": "https://github.com/mitjanikolaus/childes-speech-acts",
+    "abstract": "Studies of children's language use in the wild (e.g., in the context of child-caregiver social interaction) have been slowed by the time- and resource- consuming task of hand annotating utterances for communicative intents/speech acts. Existing studies have typically focused on investigating rather small samples of children, raising the question of how their findings generalize both to larger and more representative populations and to a richer set of interaction contexts. Here we propose a simple automatic model for speech act labeling in early childhood based on the INCA-A coding scheme (Ninio et al., 1994). After validating the model against ground truth labels, we automatically annotated the entire English-language data from the CHILDES corpus. The major theoretical result was that earlier findings generalize quite well at a large scale. Our model will be shared with the community so that researchers can use it with their data to investigate various questions related to language use development.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "nikolaus2021modeling",
+    "type": "inproceedings",
+    "title": "Modeling speech act development in early childhood: the role of frequency and linguistic cues",
+    "authors": [
+      "Nikolaus, Mitja",
+      "Maes, Juliette",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2021",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society.",
+    "url": "https://psyarxiv.com/cgs5n",
+    "code": "https://github.com/mitjanikolaus/childes-speech-acts",
+    "abstract": "A crucial step in children’s language development is the mastery of how to use language in context. This involves the ability to recognize and use major categories of speech acts (e.g., learning that a “question” is different from a “request”). The current work provides a quantitative account of speech acts’ emergence in the wild. Using a longitudinal corpus of child-caregiver conversations annotated for speech acts (Snow et al., 1996), we introduced two complementary measures of learning based on both children’s production and comprehension. We also tested two predictors of learning based on the input frequency and the speech acts’ quality of linguistic cues. We found that children’s developmental trajectory differed largely between production and comprehension. In addition, development in both of these dimensions was not explained with the same predictors (e.g., frequency in the child-directed speech was predictive of production, but not of comprehension). The broader impact of this work is to provide a computational framework for the study of communicative development where both measures and predictors of children’s pragmatic development can be tested and compared.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "fourtassi2021Continuous",
+    "type": "article",
+    "title": "Continuous developmental change explains discontinuities in word learning",
+    "authors": [
+      "Fourtassi, Abdellah",
+      "Regan, Sophie",
+      "Frank, Michael C."
+    ],
+    "year": "2021",
+    "venue": "Developmental Science",
+    "volume": "24",
+    "issue": "2",
+    "url": "https://doi.org/10.1111/desc.13018",
+    "preprint": "https://psyarxiv.com/q98cp",
+    "code": "https://github.com/afourtassi/kidswitch",
+    "abstract": "Cognitive development is often characterized in terms of discontinuities, but these discontinuities can sometimes be apparent rather than actual and can arise from continuous developmental change. To explore this idea, we use as a case study the finding by Stager and Werker (1997) that children's early ability to distinguish similar sounds does not automatically translate into word learning skills. Early explanations proposed that children may not be able to encode subtle phonetic contrasts when learning novel word meanings, thus suggesting a discontinuous/stage-like pattern of development. However, later work has revealed (e.g., through using more precise testing methods) that children do encode such contrasts, thus favoring a continuous pattern of development. Here, we propose a probabilistic model that represents word knowledge in a graded fashion and characterizes developmental change as improvement in the precision of this graded knowledge. Our model explained previous findings in the literature and provided a new prediction – the referents' visual similarity modulates word learning accuracy. The models' predictions were corroborated by human data collected from both preschool children and adults. The broader impact of this work is to show that computational models, such as ours, can help us explore the extent to which episodes of cognitive development that are typically thought of as discontinuities may emerge from simpler, continuous mechanisms.",
+    "researchSection": "cognitive1",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "fourtassi2020word",
+    "type": "inproceedings",
+    "title": "Word Co-occurrence in Child-Directed Speech Predicts Children’s Free Word Associations",
+    "authors": [
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2020",
+    "venue": "Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics",
+    "pages": "49--53",
+    "preprint": "https://psyarxiv.com/7jrhu",
+    "abstract": "The free association task has been very influential both in cognitive science and in computational linguistics. However, little research has been done to study how free associations develop in childhood. The current work focuses on the developmental hypothesis according to which free word associations emerge by mirroring the co-occurrence distribution of children's linguistic environment. I trained a distributional semantic model on a large corpus of child language and I tested if it could predict children's responses. The results largely supported the hypothesis: Co-occurrence-based similarity was a strong predictor of children's associative behavior even controlling for other possible predictors such as phonological similarity, word frequency, and word length. I discuss the findings in the light of theories of conceptual development.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "misiek2020development",
+    "type": "inproceedings",
+    "title": "Development of Multi-level Linguistic Alignment in Child-Adult Conversations",
+    "authors": [
+      "Misiek, Thomas",
+      "Favre, Benoit",
+      "Fourtassi, Abdellah"
+    ],
+    "year": "2020",
+    "venue": "Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics (CMCL)",
+    "pages": "54--58",
+    "preprint": "https://psyarxiv.com/5drp9/",
+    "code": "https://github.com/thomasMisiek/children-linguistic-alignment",
+    "abstract": "Interactive alignment is a major mechanism of linguistic coordination. Here we study the way this mechanism emerges in development across the lexical, syntactic, and conceptual levels. We leverage NLP tools to analyze a large-scale corpus of child-adult conversations between 2 and 5 years old. We found that, across development, children align consistently to adults above chance and that adults align consistently more to children than vice versa (even controlling for language production abilities). Besides these consistencies, we found a diversity of developmental trajectories across linguistic levels. These corpus-based findings provide strong support for an early onset of multi-level linguistic alignment in children and invite new experimental work.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "fourtassi2020growth",
+    "type": "article",
+    "title": "The growth of children's semantic and phonological networks: Insight from 10 languages",
+    "authors": [
+      "Fourtassi, Abdellah",
+      "Bian, Yuan",
+      "Frank, Michael C"
+    ],
+    "year": "2020",
+    "venue": "Cognitive Science",
+    "volume": "44",
+    "issue": "7",
+    "pages": "e12847",
+    "url": "https://doi.org/10.1111/cogs.12847",
+    "preprint": "https://psyarxiv.com/37npj",
+    "code": "https://github.com/afourtassi/networks",
+    "abstract": "Children tend to produce words earlier when they are connected to a variety of other words along the phonological and semantic dimensions. Though these semantic and phonological connectivity effects have been extensively documented, little is known about their underlying developmental mechanism. One possibility is that learning is driven by lexical network growth where highly connected words in the child's early lexicon enable learning of similar words. Another possibility is that learning is driven by highly connected words in the external learning environment, instead of highly connected words in the early internal lexicon. The present study tests both scenarios systematically in both the phonological and semantic domains across 10 languages. We show that phonological and semantic connectivity in the learning environment drives growth in both production- and comprehension-based vocabularies, even controlling for word frequency and length. This pattern of findings suggests a word learning process where children harness their statistical learning abilities to detect and learn highly connected words in the learning environment.",
+    "researchSection": "cognitive2",
+    "representative": true,
+    "hidden": false
+  },
+  {
+    "id": "fourtassi2020how",
+    "type": "article",
+    "title": "How optimal is word recognition under multimodal uncertainty?",
+    "authors": [
+      "Abdellah Fourtassi",
+      "Michael C. Frank"
+    ],
+    "year": "2020",
+    "venue": "Cognition",
+    "volume": "199",
+    "url": "https://doi.org/10.1016/j.cognition.2019.104092",
+    "preprint": "https://psyarxiv.com/qvr9j",
+    "code": "https://github.com/afourtassi/WordRec",
+    "abstract": "Identifying a spoken word in a referential context requires both the ability to integrate multimodal input and the ability to reason under uncertainty. How do these tasks interact with one another? We study how adults identify novel words under joint uncertainty in the auditory and visual modalities, and we propose an ideal observer model of how cues in these modalities are combined optimally. Model predictions are tested in four experiments where recognition is made under various sources of uncertainty. We found that participants use both auditory and visual cues to recognize novel words. When the signal is not distorted with environmental noise, participants weight the auditory and visual cues optimally, that is, according to the relative reliability of each modality. In contrast, when one modality has noise added to it, human perceivers systematically prefer the unperturbed modality to a greater extent than the optimal model does. This work extends the literature on perceptual cue combination to the case of word recognition in a referential context. In addition, this context offers a link to the study of multimodal information in word meaning learning.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Wilson2020Cogsci",
+    "type": "inproceedings",
+    "title": "Discovering Conceptual Hierarchy Through Explicit and Implicit Cues in Child-Directed Speech",
+    "authors": [
+      "Fourtassi, A",
+      "Wilson, K.",
+      "Frank, M. C."
+    ],
+    "year": "2020",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "preprint": "https://psyarxiv.com/s5q8u",
+    "code": "https://github.com/afourtassi/concepts",
+    "abstract": "In order for children to understand and reason about the world in a mature fashion, they need to learn that conceptual categories are organized in a hierarchical fashion (e.g., a dog is also an animal). The caregiver linguistic input can play an important role in this learning, and previous studies have documented several cues in parental talk that can help children learn a conceptual hierarchy. However, these previous studies used different datasets and methods which made difficult the systematic comparison of these cues and the study of their relative contribution. Here, we use a large-scale corpus of child-directed speech and a classification-based evaluation method which allowed us to investigate, within the same framework, various cues that varied radically in terms of how explicit the information they offer is. We found the most explicit cues to be too sparse or too noisy to support robust learning (though part of the noise may be due to imperfect operationalization). In contrast, the implicit cues offered, overall, a reliable source of information. Our work confirms the utility of caregiver talk for conveying conceptual information. It provides a stepping stone towards a cognitive model that would use this information in a principled way, possibly leading to testable predictions about children's conceptual development.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2019CMCL",
+    "type": "inproceedings",
+    "title": "The Development of Abstract Concepts in Children’s Early Lexical Networks",
+    "authors": [
+      "Fourtassi, A",
+      "Scheinfeld, L.",
+      "Frank, M. C."
+    ],
+    "year": "2019",
+    "venue": "Proceedings of the 10th Workshop on Cognitive Modeling and Computational Linguistics (CMCL)",
+    "preprint": "https://psyarxiv.com/cq8pb/",
+    "code": "https://github.com/afourtassi/conceptNet",
+    "abstract": "How do children learn abstract concepts such as animal vs. artifact? Previous research has suggested that such concepts can partly be derived using cues from the language children hear around them. Following this suggestion, we propose a model where we represent the children’s developing lexicon as an evolving network. The nodes of this network are based on vocabulary knowledge as reported by parents, and the edges between pairs of nodes are based on the probability of their co-occurrence in a corpus of child-directed speech. We found that several abstract categories can be identified as the dense regions in such networks. In addition, our simulations suggest that these categories develop simultaneously, rather than sequentially, thanks to the children’s word learning trajectory which favors the exploration of the global conceptual space.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2019Cogsci",
+    "type": "inproceedings",
+    "title": "Phoneme learning is influenced by the taxonomic organization of the semantic referents",
+    "authors": [
+      "Fourtassi, A",
+      "Dupoux, E."
+    ],
+    "year": "2019",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "https://hal.science/hal-02274093/document",
+    "abstract": "Word learning relies on the ability to master the sound contrasts that are phonemic (i.e., signal meaning difference) in a given language. Though the timeline of phoneme development has been studied extensively over the past few decades, the mechanism of this development is poorly understood. Previous work has shown that human learners rely on referential information to differentiate similar sounds, but largely ignored the problem of taxonomic ambiguity at the semantic level (two different objects may be described by one or two words depending on how abstract the meaning intended by the speaker is). In this study, we varied the taxonomic distance of pairs of objects and tested how adult learners judged the phonemic status of the sound contrast associated with each of these pairs. We found that judgments were sensitive to gradients in the taxonomic structure, suggesting that learners use probabilistic information at the semantic level to optimize the accuracy of their judgements at the phonological level. The findings provide evidence for an interaction between phonological learning and meaning generalization, raising important questions about how these two important processes of language acquisition are related.",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2019Cogsci2",
+    "type": "inproceedings",
+    "title": "Continuous Developmental Change can Explain Discontinuities in Word Learning",
+    "authors": [
+      "Fourtassi, A",
+      "Regan, S.",
+      "Frank, M. C."
+    ],
+    "year": "2019",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "http://mindmodeling.org/cogsci2019/papers/0312/0312.pdf",
+    "abstract": "Cognitive development is often characterized in term of discontinuities, but these discontinuities can sometimes be apparent rather than actual and can arise from continuous developmental change. To explore this idea, we use as a case study the finding by Stager and Werker (1997) that children’s early ability to distinguish similar sounds does not automatically translate into word learning skills. Early explanations proposed that children may not be able to encode subtle phonetic contrasts when learning novel word meanings, thus suggesting a discontinuous/stage-like pattern of development. However, later work has revealed (e.g., through using simpler testing methods) that children do encode such contrasts, thus favoring a continuous pattern of development. Here we propose a probabilistic model describing how development may proceed in a continuous fashion across the lifespan. The model accounts for previously documented facts and provides new predictions. We collected data from preschool children and adults, and we showed that the model can explain various patterns of learning both within the same age and across development. The findings suggest that major aspects of cognitive development that are typically thought of as discontinuities, may emerge from simpler, continuous mechanisms.",
+    "pdf": "http://mindmodeling.org/cogsci2019/papers/0312/0312.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2018Cogsci",
+    "type": "inproceedings",
+    "title": "Word Learning as Network Growth: A Cross-Linguistic Analysis",
+    "authors": [
+      "Fourtassi, A",
+      "Bian, Y.",
+      "Frank, M. C."
+    ],
+    "year": "2018",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "https://langcog.stanford.edu/papers_new/fourtassi-2018-cogsci.pdf",
+    "abstract": "Children tend to produce words earlier when they are connected to a variety of other words along both the phonological and semantic dimensions. Though this connectivity effect has been extensively documented, little is known about the underlying developmental mechanism. One view suggests that learning is primarily driven by a network growth model where highly connected words in the child’s early lexicon attract similar words. Another view suggests that learning is driven by highly connected words in the external learning environment instead of highly connected words in the early internal lexicon. The present study tests both scenarios systematically in both the phonological and semantic domains, and across 8 languages. We show that external connectivity in the learning environment drives growth in both the semantic and the phonological networks, and that this pattern is consistent cross-linguistically. The findings suggest a word learning mechanism where children harness their statistical learning abilities to (indirectly) detect and learn highly connected words in the learning environment.",
+    "pdf": "https://langcog.stanford.edu/papers_new/fourtassi-2018-cogsci.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2017Cogsci",
+    "type": "inproceedings",
+    "title": "Word Identification Under Multimodal Uncertainty",
+    "authors": [
+      "Fourtassi, A.",
+      "Frank, M. C."
+    ],
+    "year": "2017",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "https://langcog.stanford.edu/papers_new/fourtassi-2017-cogsci.pdf",
+    "abstract": "Identifying the visual referent of a spoken word – that a particular insect is referred to by the word \"bee\" – requires both the ability to process and integrate multimodal input and the ability to reason under uncertainty. How do these tasks interact with one another? We introduce a task that allows us to examine how adults identify words under joint uncertainty in the auditory and visual modalities. We propose an ideal observer model of the task which provides an optimal baseline. Model predictions are tested in two experiments where word recognition is made under two kinds of uncertainty: category ambiguity and distorting noise. In both cases, the ideal observer model explains much of the variance in human judgments. But when one modality had noise added to it, human perceivers systematically preferred the unperturbed modality to a greater extent than the ideal observer model did.",
+    "pdf": "https://langcog.stanford.edu/papers_new/fourtassi-2017-cogsci.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2016Cogsci",
+    "type": "inproceedings",
+    "title": "The role of word-word co-occurrence in word meaning learning",
+    "authors": [
+      "Fourtassi, A.",
+      "Dupoux, E."
+    ],
+    "year": "2016",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "http://www.lscp.net/persons/dupoux/papers/Fourtassi_D_2016.Zero-shot%20learning%20in%20humans.ProcCogSci.pdf",
+    "abstract": "A growing body of research on early word learning suggests that learners gather word-object co-occurrence statistics across learning situations. Here we test a new mechanism whereby learners are also sensitive to word-word co-occurrence statistics. Indeed, we find that participants can infer the likely referent of a novel word based on its co-occurrence with other words, in a way that mimics a machine learning algorithm dubbed ‘zero-shot learning’. We suggest that the interaction between referential and distributional regularities can bring robustness to the process of word acquisition.",
+    "pdf": "http://www.lscp.net/persons/dupoux/papers/Fourtassi_D_2016.Zero-shot%20learning%20in%20humans.ProcCogSci.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2015thesis",
+    "venue": "Ecole Normale Supérieure, Paris",
+    "type": "phdthesis",
+    "title": "Acquiring sounds and meaning jointly in early word learning",
+    "authors": [
+      "Fourtassi, A."
+    ],
+    "year": "2015",
+    "url": "https://theses.hal.science/tel-01774596/file/Fourtassi-2015-These.pdf",
+    "pdf": "https://theses.hal.science/tel-01774596/file/Fourtassi-2015-These.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2014Conll",
+    "type": "inproceedings",
+    "title": "A Rudimentary Lexicon and Semantics Help Bootstrap Phoneme Acquisition",
+    "authors": [
+      "Fourtassi, A.",
+      "Dupoux, E."
+    ],
+    "year": "2014",
+    "venue": "Proceedings of the Conference on Computational Natural Language Learning (CoNLL)",
+    "url": "https://aclanthology.org/W14-1620.pdf",
+    "abstract": "Infants spontaneously discover the relevant phonemes of their language without any direct supervision. This acquisition is puzzling because it seems to require the availability of high levels of linguistic structures (lexicon, semantics), that logically suppose the infants having a set ofphonemes already. We show how this circularity can be broken by testing, in realsize language corpora, a scenario whereby infants would learn approximate representations at all levels, and then refine them in a mutually constraining way. We start with corpora of spontaneous speech that have been encoded in a varying number of detailed context-dependent allophones. We derive, in an unsupervised way, an approximate lexicon and a rudimentary semantic representation. Despite the fact that all these representations are poor approximations of the ground truth, they help reorganize the fine grained categories into phoneme-like categories with a high degree of accuracy",
+    "pdf": "https://aclanthology.org/W14-1620.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2014Acl",
+    "type": "inproceedings",
+    "title": "Exploring the Relative Role of Bottom-Up and Top-Down information in Phoneme Learning",
+    "authors": [
+      "Fourtassi, A.",
+      "Schatz, T.",
+      "Varadarajan, B.",
+      "Dupoux, E."
+    ],
+    "year": "2014",
+    "venue": "Proceedings of the Annual Meeting of the Association of Computational Linguistics (ACL)",
+    "url": "https://aclanthology.org/P14-2001.pdf",
+    "abstract": "We test both bottom-up and top-down approaches in learning the phonemic status of the sounds of English and Japanese. We used large corpora of spontaneous speech to provide the learner with an input that models both the linguistic properties and statistical regularities of each language. We found both approaches to help discriminate between allophonic and phonemic contrasts with a high degree of accuracy, although top-down cues proved to be effective only on an interesting subset of the data",
+    "researchSection": "input1",
+    "pdf": "https://aclanthology.org/P14-2001.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2014Cogsci",
+    "type": "inproceedings",
+    "title": "Self Consistency as an Inductive Bias in Early Language Acquisition.",
+    "authors": [
+      "Fourtassi, A.",
+      "Dunbar, E.",
+      "Dupoux, E."
+    ],
+    "year": "2014",
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+    "url": "http://www.lscp.net/persons/dupoux/papers/Fourtassi_DD_2014_SelfConsistency.inCogSci.pdf",
+    "abstract": "In this paper we introduce an inductive bias for language acquisition under a view where learning of the various levels of linguistic structure takes place interactively. The bias encourages the learner to choose sound systems that lead to more semantically coherent lexicons. We quantify this coherence using an intrinsic and unsupervised measure of predictiveness called \"self-consistency.\" We found self-consistency to be optimal under the true phonemic inventory and the correct word segmentation in English and Japanese.",
+    "pdf": "http://www.lscp.net/persons/dupoux/papers/Fourtassi_DD_2014_SelfConsistency.inCogSci.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2013CMCL",
+    "type": "inproceedings",
+    "title": "WhyisEnglishsoeasytosegment?",
+    "authors": [
+      "Fourtassi, A.",
+      "Borschinger, B.",
+      "Johnson, M.",
+      "Dupoux, E"
+    ],
+    "year": "2013",
+    "venue": "Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics (CMCL)",
+    "url": "https://aclanthology.org/W13-2601.pdf",
+    "abstract": "Cross-linguistic studies on unsupervised word segmentation have consistently shown that English is easier to segment than other languages. In this paper, we propose an explanation of this finding based on the notion of segmentation ambiguity. We show that English has a very low segmentation ambiguity compared to Japanese and that this difference correlates with the segmentation performance in a unigram model. We suggest that segmentation ambiguity is linked to a trade-off between syllable structure complexity and word length distribution.",
+    "pdf": "https://aclanthology.org/W13-2601.pdf",
+    "representative": false,
+    "hidden": false
+  },
+  {
+    "id": "Fourtassi2013ACL",
+    "type": "inproceedings",
+    "title": "A Corpus-based Evaluation Method for Distributional Semantic Models",
+    "authors": [
+      "Fourtassi, A.",
+      "Dupoux, E"
+    ],
+    "year": "2013",
+    "venue": "Proceedings of the Annual Meeting of the Association of Computational Linguistics (ACL), Student Research Workshop",
+    "url": "https://aclanthology.org/P13-3024.pdf",
+    "abstract": "Evaluation methods for Distributional Semantic Models typically rely on behaviorally derived gold standards. These methods are difficult to deploy in languages with scarce linguistic/behavioral resources. We introduce a corpus-based measure that evaluates the stability of the lexical semantic similarity space using a pseudo-synonym same-different detection task and no external resources. We show that it enables to predict two behaviorbased measures across a range of parameters in a Latent Semantic Analysis model.",
+    "pdf": "https://aclanthology.org/P13-3024.pdf",
+    "representative": false,
+    "hidden": false
+  }
+];
+
+export const visiblePublications = publications.filter((publication) => !publication.hidden);
+
+export const representativePublications = visiblePublications.filter((publication) => publication.representative);

@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PersonList from '../components/PersonList.astro';
+import { principalInvestigator, currentMembers, alumni } from '../data/people';
+
+const sections = [
+  { id: 'principal-investigator', title: 'Principal Investigator', people: [principalInvestigator] },
+  { id: 'current-members', title: 'Current members', people: currentMembers },
+  { id: 'alumni', title: 'Alumni', people: alumni },
+];
+---
+<BaseLayout title="People" description="The CoCoDev research group: Principal Investigator, current members, and PhD and postdoctoral alumni." bodyClass="people-page">
+  <div class="content-page">
+    {sections.map(section => (
+      <section class="content-section" aria-labelledby={section.id}>
+        <h2 id={section.id}>{section.title}</h2>
+        <PersonList people={section.people} />
+      </section>
+    ))}
+  </div>
+</BaseLayout>

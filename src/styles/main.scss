@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+// Retain the original typography and Air colors, with a white page background.
+$background-color: #fff;
+@import "minimal-mistakes/skins/air";
+@import "minimal-mistakes";
+@import "publications";
+@import "homepage";
+@import "responsive";
+@import "cocodev";

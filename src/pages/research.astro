@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationList from '../components/PublicationList.astro';
+import { visiblePublications } from '../data/publications';
+import { researchIntroduction, researchSections, researchClosing } from '../data/research';
+---
+<BaseLayout title="Research" bodyClass="research-page">
+  <hr />
+  <div class="center-div">
+    {researchIntroduction.map(text => <p>{text}</p>)}
+    <figure><img src="/assets/images/research.png" alt="An adult names a car for a child. Three panels illustrate sensory input, cognitive mechanisms that map multimodal input to lexical knowledge, and social interactions through communicative coordination." width="1774" height="1312" /></figure>
+    {researchSections.map(section => (
+      <section aria-labelledby={section.id}>
+        <h2 id={section.id}>{section.title}</h2>
+        <p>{section.introduction}</p>
+        {section.publicationGroups.map(group => <><p>{group.text}</p><PublicationList prefix={group.publicationSection} publications={visiblePublications.filter(pub => pub.researchSection === group.publicationSection)} /></>)}
+      </section>
+    ))}
+    <p>{researchClosing}</p>
+  </div>
+</BaseLayout>

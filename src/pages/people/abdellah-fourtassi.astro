@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlueskyFeed from '../../components/BlueskyFeed.astro';
+import RecentUpdates from '../../components/RecentUpdates.astro';
+import PublicationList from '../../components/PublicationList.astro';
+import { profile } from '../../data/profile';
+import { representativePublications } from '../../data/publications';
+---
+<BaseLayout title="Abdellah Fourtassi" description="A short biography, selected publications, teaching, news, and other activities from Abdellah Fourtassi, Principal Investigator of CoCoDev." bodyClass="pi-profile-page">
+  <div class="content-page">
+    <div class="profile-summary">
+      <img class="profile-portrait" src="/assets/images/profile.png" alt="Abdellah Fourtassi" width="110" height="110" />
+      <p class="profile-role">{profile.title}<br />NLP group (TALEP) at LIS<br />AI &amp; Cognition group at ILCB<br />{profile.university}</p>
+      <p class="profile-links"><a href={profile.cv}>Full CV (PDF)</a> · <a href={`mailto:${profile.email}`}>Email</a> · <a href={profile.scholar}>Google Scholar</a> · <a href={profile.bluesky}>Bluesky</a> · <a href={profile.linkedin}>LinkedIn</a></p>
+    </div>
+
+    <p>I lead CoCoDev and serve as Deputy Director for Research at the Institute of Language, Communication and the Brain (<a href="https://www.ilcb.fr/">ILCB</a>). I study children’s language and communicative development using computational models, naturalistic data, and experiments.</p>
+    <p>I trained in mathematics and physics at École Polytechnique and earned a PhD in cognitive science at École Normale Supérieure (with Emmanuel Dupoux), before working as a postdoctoral researcher in the Department of Psychology at Stanford University (with Michael C. Frank).</p>
+    <p>I also co-lead the national <a href="https://gdr-tal.cnrs.fr/groupes-de-travail/gt-nlp-cognitive-science/">NLP &amp; Cognition working group</a> of CNRS GDR TAL and serve as an Associate Editor of <i>Dialogue &amp; Discourse</i>.</p>
+
+    <RecentUpdates audience="personal" showByline={false} />
+
+    <section class="content-section" aria-labelledby="representative-publications">
+      <h2 id="representative-publications">Representative publications</h2>
+      <PublicationList publications={representativePublications} prefix="profile-selected" compact />
+    </section>
+
+    <section class="content-section" aria-labelledby="teaching">
+      <h2 id="teaching">Teaching</h2>
+      <p>I teach in the Cognitive Science and Machine Learning master’s programs and the undergraduate Computer Science program at Aix-Marseille University. My teaching includes two courses I designed at the interface of cognitive science and machine learning:</p>
+      <ul class="profile-list">
+        <li><i>Building Minds: The Programming Tools</i> (master’s level). Students formalize theories of cognition in Python by building agents that perceive, remember, and act. They progressively add cognitive capacities to their agents and test when these improve ecological rationality in environments of varying complexity, using measures such as net energy gained while foraging.</li>
+        <li><i>Language Development with Deep Learning</i> (master’s level). Students use language models, vision models, and reinforcement learning techniques to test how learning conditions shape language development, including multimodal input and social feedback. Course materials will be released as a teaching companion to my forthcoming book with Cambridge University Press.</li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="bluesky">
+      <h2 id="bluesky">Other activities</h2>
+      <BlueskyFeed />
+    </section>
+  </div>
+</BaseLayout>

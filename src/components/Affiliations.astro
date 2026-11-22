@@ -1,0 +1,14 @@
+---
+const affiliations = [
+  { name: 'Aix-Marseille University', href: 'https://www.univ-amu.fr/', image: '/assets/affiliations/amu-letterhead.png', width: 441, height: 98, className: 'affiliation-logo--amu' },
+  { name: 'LIS — Laboratoire d’Informatique et Systèmes', href: 'https://www.lis-lab.fr/', image: '/assets/affiliations/lis-letterhead.png', width: 821, height: 316, className: 'affiliation-logo--lis' },
+  { name: 'ILCB — Institute of Language, Communication and the Brain', href: 'https://www.ilcb.fr/', image: '/assets/affiliations/ilcb.png', width: 1570, height: 364, className: 'affiliation-logo--ilcb' },
+  { name: 'CNRS — Centre national de la recherche scientifique', href: 'https://www.cnrs.fr/', image: '/assets/affiliations/cnrs-letterhead.png', width: 1000, height: 1000, className: 'affiliation-logo--cnrs' },
+  { name: 'ANR — Agence nationale de la recherche', href: 'https://anr.fr/', image: '/assets/affiliations/anr-symbol.jpg', width: 1211, height: 461, className: 'affiliation-logo--anr' },
+];
+---
+<nav class="affiliations" aria-label="Affiliations and funding">
+  <ul class="affiliation-logos">
+    {affiliations.map(item => <li><a href={item.href}><img class={item.className} src={item.image} alt={item.name} width={item.width} height={item.height} loading="lazy" /></a></li>)}
+  </ul>
+</nav>
