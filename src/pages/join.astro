@@ -8,6 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 id="glad">GLAD project: upcoming recruitment</h2>
       <p>Our team has been awarded funding from the French National Research Agency (ANR) for <i>Grounded Language Development: A Unified Framework for Learnability Studies</i> (2026–2030).</p>
       <p>The project will recruit a research engineer and a PhD candidate. Recruitment is on a rolling basis, so we encourage you to contact us early. See the contact details below for informal inquiries.</p>
+      <p><a class="btn apply-link" href="/apply/">Apply here</a></p>
     </section>
     <section class="content-section" aria-labelledby="phd-postdoc">
       <h2 id="phd-postdoc">PhD and postdoctoral research</h2>
@@ -25,3 +26,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
   </div>
 </BaseLayout>
+
+
+<style>
+  .apply-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.55em 1.2em;
+    font-size: 0.875em;
+    line-height: 1.4;
+  }
+  .apply-link, .apply-link:visited {
+    color: #fff;
+    background-color: #a83232;
+  }
+  .apply-link:hover, .apply-link:focus-visible {
+    color: #fff;
+    background-color: #872727;
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  formId: string;
+  title: string;
+}
+
+const { formId, title } = Astro.props;
+const embedUrl = new URL(`/embed/${encodeURIComponent(formId)}`, 'https://tally.so');
+for (const option of ['alignLeft', 'hideTitle', 'transparentBackground', 'dynamicHeight']) {
+  embedUrl.searchParams.set(option, '1');
+}
+---
+
+<iframe
+  class="tally-form"
+  data-tally-src={embedUrl.href}
+  loading="lazy"
+  width="100%"
+  height="1600"
+  title={title}
+></iframe>
+<script
+  is:inline
+  async
+  src="https://tally.so/widgets/embed.js"
+  onload="window.Tally.loadEmbeds()"
+></script>
+
+<style>
+  .tally-form { display: block; width: 100%; border: 0; }
+</style>

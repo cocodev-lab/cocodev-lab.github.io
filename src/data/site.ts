@@ -10,7 +10,7 @@ export const navigation = [
   { label: 'Research', href: '/research/' },
   { label: 'People', href: '/people/' },
   { label: 'Publications', href: '/publications/' },
-  { label: 'Resources', href: '/resources/' },
   { label: 'Seminars', href: '/seminars/' },
+  { label: 'Resources', href: '/resources/' },
   { label: 'Join us', href: '/join/' },
 ];

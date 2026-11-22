@@ -12,9 +12,8 @@ export interface ResearchSection {
 }
 
 export const researchIntroduction = [
-  'Our research program focuses on scaling the study of children’s language development to reflect the complexity of real-world learning environments, using large-scale data and machine learning.',
-  'This approach helps us improve the ecological validity of scientific theories and develop practical tools that support language learning.',
-  'We investigate the key elements that shape how children learn language: sensory input, cognitive mechanisms, and social interactions.',
+  'Our research focuses on testing theories of language development at scale, accounting for the complexity of real-world learning environments. We use machine learning models to study how language develops from children’s everyday experience.',
+  'Specifically, we investigate three key elements that shape how children learn language: sensory input, cognitive mechanisms, and social interactions.',
 ];
 
 export const researchSections: ResearchSection[] = [
@@ -24,7 +23,7 @@ export const researchSections: ResearchSection[] = [
     introduction: 'Language development starts with the sensory experiences of children—the words they hear and the things they see. We collect and analyze data from these experiences to understand how their richness influences learning.',
     publicationGroups: [
       {
-        text: 'One line of inquiry explores how children learn linguistic structures like sounds and grammar from natural speech. We focus on how they overcome variability and noise to form stable mental representations.',
+        text: 'One line of inquiry explores how children learn linguistic structures like sounds and grammar from natural speech. We focus on how they overcome variability and ambiguity to learn the target units and rules.',
         publicationSection: 'input1',
       },
       {
@@ -43,7 +42,7 @@ export const researchSections: ResearchSection[] = [
         publicationSection: 'cognitive1',
       },
       {
-        text: 'We also investigate how language is refined over months and years of development. Our methods allow us to study interactions between how knowledge is organized in a child’s long-term memory, such as their lexical network, and the characteristics of their natural learning environment.',
+        text: 'We also investigate how language is refined over months and years of development. Specifically, we study the interaction between how knowledge is organized in a child’s long-term memory, such as their lexical network, and the characteristics of their natural learning environment.',
         publicationSection: 'cognitive2',
       },
     ],
@@ -58,11 +57,11 @@ export const researchSections: ResearchSection[] = [
         publicationSection: 'social1',
       },
       {
-        text: 'We investigate how these communication skills influence the effectiveness of language learning. In particular, we use reinforcement learning to test the role of social feedback in the learning process.',
+        text: 'We investigate how these communication skills impact language learning. For example, we use reinforcement learning to test the role of social feedback in the learning process.',
         publicationSection: 'social2',
       },
     ],
   },
 ];
 
-export const researchClosing = 'We use machine learning to develop theories of language development that can be tested and refined in real-world settings. This ecological approach helps us assess the explanatory scope and practical relevance of our theories. It can guide the design of educational tools and therapeutic interventions grounded in theory, while practical challenges provide further opportunities to test those theories.';
+export const researchClosing = 'This approach helps us assess and improve the ecological validity of our theories. It can also help connect theory with applications in the real world.';
